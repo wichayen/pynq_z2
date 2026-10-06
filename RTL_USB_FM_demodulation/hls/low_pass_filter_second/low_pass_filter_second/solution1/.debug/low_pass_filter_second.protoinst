@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"low_pass_filter_second": {
+			"proto_instances": {
+			}
+		}
+	}
+}

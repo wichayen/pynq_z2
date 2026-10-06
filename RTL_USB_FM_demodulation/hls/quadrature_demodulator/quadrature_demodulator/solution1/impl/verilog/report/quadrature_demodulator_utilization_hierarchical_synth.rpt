@@ -1,0 +1,40 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Sep 26 05:43:32 2026
+| Host         : ndrswcy running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/quadrature_demodulator_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|                  Instance                 |                                 Module                                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                              |                                                                  (top) |        303 |        303 |       0 |    0 | 526 |      0 |      0 |          8 |
+|   bd_0_i                                  |                                                                   bd_0 |        303 |        303 |       0 |    0 | 526 |      0 |      0 |          8 |
+|     hls_inst                              |                                                        bd_0_hls_inst_0 |        303 |        303 |       0 |    0 | 526 |      0 |      0 |          8 |
+|       (hls_inst)                          |                                                        bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|       inst                                |                                 bd_0_hls_inst_0_quadrature_demodulator |        303 |        303 |       0 |    0 | 526 |      0 |      0 |          8 |
+|         (inst)                            |                                 bd_0_hls_inst_0_quadrature_demodulator |          0 |          0 |       0 |    0 | 242 |      0 |      0 |          0 |
+|         mul_32s_32s_54_2_1_U1             |              bd_0_hls_inst_0_quadrature_demodulator_mul_32s_32s_54_2_1 |         37 |         37 |       0 |    0 |  34 |      0 |      0 |          4 |
+|         mul_32s_32s_54_2_1_U2             |            bd_0_hls_inst_0_quadrature_demodulator_mul_32s_32s_54_2_1_0 |         37 |         37 |       0 |    0 |  34 |      0 |      0 |          4 |
+|         regslice_both_imag_V_data_V_U     |                   bd_0_hls_inst_0_quadrature_demodulator_regslice_both |         69 |         69 |       0 |    0 |  68 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_data_V_U |                 bd_0_hls_inst_0_quadrature_demodulator_regslice_both_1 |         77 |         77 |       0 |    0 |  68 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_last_V_U |   bd_0_hls_inst_0_quadrature_demodulator_regslice_both__parameterized1 |          6 |          6 |       0 |    0 |   6 |      0 |      0 |          0 |
+|         regslice_both_real_r_V_data_V_U   |                 bd_0_hls_inst_0_quadrature_demodulator_regslice_both_2 |         71 |         71 |       0 |    0 |  68 |      0 |      0 |          0 |
+|         regslice_both_real_r_V_last_V_U   | bd_0_hls_inst_0_quadrature_demodulator_regslice_both__parameterized1_3 |          6 |          6 |       0 |    0 |   6 |      0 |      0 |          0 |
++-------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 26 05:27:05 2026
+# Process ID: 31652
+# Current directory: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/fir_decimation_filter/fir_decimation_filter/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/fir_decimation_filter/fir_decimation_filter/solution1/impl/ip/vivado.log
+# Journal file: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/fir_decimation_filter/fir_decimation_filter/solution1/impl/ip\vivado.jou
+# Running On: ndrswcy, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 14, Host memory: 34033 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

@@ -1,0 +1,150 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x63E481DEAF8F9306",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../base.gen/sources_1/bd/xilinx_example_v1_0_bfm_1",
+      "name": "xilinx_example_v1_0_bfm_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2"
+    },
+    "design_tree": {
+      "xilinx_example_0": "",
+      "master_0": ""
+    },
+    "ports": {
+      "ACLK": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ARESETN"
+          },
+          "CLK_DOMAIN": {
+            "value": "xilinx_example_v1_0_bfm_1_ACLK"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "ARESETN": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      }
+    },
+    "components": {
+      "xilinx_example_0": {
+        "vlnv": "xilinx.com:user:xilinx_example:1.0",
+        "xci_name": "xilinx_example_v1_0_bfm_1_xilinx_example_0_0",
+        "xci_path": "ip\\xilinx_example_v1_0_bfm_1_xilinx_example_0_0\\xilinx_example_v1_0_bfm_1_xilinx_example_0_0.xci",
+        "inst_hier_path": "xilinx_example_0"
+      },
+      "master_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "xilinx_example_v1_0_bfm_1_master_0_0",
+        "xci_path": "ip\\xilinx_example_v1_0_bfm_1_master_0_0\\xilinx_example_v1_0_bfm_1_master_0_0.xci",
+        "inst_hier_path": "master_0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Master_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Master_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "master_0_M_AXI": {
+        "interface_ports": [
+          "master_0/M_AXI",
+          "xilinx_example_0/S00_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "aclk_net": {
+        "ports": [
+          "ACLK",
+          "xilinx_example_0/s00_axi_aclk",
+          "master_0/aclk"
+        ]
+      },
+      "aresetn_net": {
+        "ports": [
+          "ARESETN",
+          "xilinx_example_0/s00_axi_aresetn",
+          "master_0/aresetn"
+        ]
+      }
+    },
+    "addressing": {
+      "/master_0": {
+        "address_spaces": {
+          "Master_AXI": {
+            "segments": {
+              "SEG_xilinx_example_0_S00_AXI_reg": {
+                "address_block": "/xilinx_example_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x44A00000",
+                "range": "64K",
+                "offset_base_param": "C_S00_AXI_BASEADDR",
+                "offset_high_param": "C_S00_AXI_HIGHADDR"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

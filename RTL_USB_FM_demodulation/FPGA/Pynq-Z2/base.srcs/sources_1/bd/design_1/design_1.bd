@@ -1,0 +1,329 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA7E0FB3AFED77C55",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../base.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fir_decimation_filter_r": "",
+      "quadrature_demodulat_0": "",
+      "low_pass_filter_first_0": "",
+      "low_pass_filter_seco_0": "",
+      "fir_decimation_filter_i": ""
+    },
+    "interface_ports": {
+      "imag_in": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_ap_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "1"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "1"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "1"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      },
+      "real_in": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_ap_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "1"
+          },
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "1"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "1"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      },
+      "output_r": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_ap_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "2",
+            "value_src": "const_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          }
+        }
+      }
+    },
+    "ports": {
+      "ap_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "imag_in:real_in:output_r",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst_n",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_ap_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "fir_decimation_filter_r": {
+        "vlnv": "xilinx.com:hls:fir_decimation_filter:1.0",
+        "xci_name": "design_1_fir_decimation_filter_r_0",
+        "xci_path": "ip\\design_1_fir_decimation_filter_r_0\\design_1_fir_decimation_filter_r_0.xci",
+        "inst_hier_path": "fir_decimation_filter_r"
+      },
+      "quadrature_demodulat_0": {
+        "vlnv": "xilinx.com:hls:quadrature_demodulator:1.0",
+        "xci_name": "design_1_quadrature_demodulat_0_0",
+        "xci_path": "ip\\design_1_quadrature_demodulat_0_0\\design_1_quadrature_demodulat_0_0.xci",
+        "inst_hier_path": "quadrature_demodulat_0"
+      },
+      "low_pass_filter_first_0": {
+        "vlnv": "xilinx.com:hls:low_pass_filter_first:1.0",
+        "xci_name": "design_1_low_pass_filter_first_0_0",
+        "xci_path": "ip\\design_1_low_pass_filter_first_0_0\\design_1_low_pass_filter_first_0_0.xci",
+        "inst_hier_path": "low_pass_filter_first_0"
+      },
+      "low_pass_filter_seco_0": {
+        "vlnv": "xilinx.com:hls:low_pass_filter_second:1.0",
+        "xci_name": "design_1_low_pass_filter_seco_0_0",
+        "xci_path": "ip\\design_1_low_pass_filter_seco_0_0\\design_1_low_pass_filter_seco_0_0.xci",
+        "inst_hier_path": "low_pass_filter_seco_0"
+      },
+      "fir_decimation_filter_i": {
+        "vlnv": "xilinx.com:hls:fir_decimation_filter:1.0",
+        "xci_name": "design_1_fir_decimation_filter_i_0",
+        "xci_path": "ip\\design_1_fir_decimation_filter_i_0\\design_1_fir_decimation_filter_i_0.xci",
+        "inst_hier_path": "fir_decimation_filter_i"
+      }
+    },
+    "interface_nets": {
+      "fir_decimation_filter_0_output_r": {
+        "interface_ports": [
+          "fir_decimation_filter_r/output_r",
+          "quadrature_demodulat_0/real_r"
+        ]
+      },
+      "fir_decimation_filter_1_output_r": {
+        "interface_ports": [
+          "fir_decimation_filter_i/output_r",
+          "quadrature_demodulat_0/imag"
+        ]
+      },
+      "input_r_0_1": {
+        "interface_ports": [
+          "imag_in",
+          "fir_decimation_filter_i/input_r"
+        ]
+      },
+      "input_r_1_1": {
+        "interface_ports": [
+          "real_in",
+          "fir_decimation_filter_r/input_r"
+        ]
+      },
+      "low_pass_filter_first_0_output_r": {
+        "interface_ports": [
+          "low_pass_filter_first_0/output_r",
+          "low_pass_filter_seco_0/input_r"
+        ]
+      },
+      "low_pass_filter_seco_0_output_r": {
+        "interface_ports": [
+          "output_r",
+          "low_pass_filter_seco_0/output_r"
+        ]
+      },
+      "quadrature_demodulat_0_output_r": {
+        "interface_ports": [
+          "quadrature_demodulat_0/output_r",
+          "low_pass_filter_first_0/input_r"
+        ]
+      }
+    },
+    "nets": {
+      "ps7_0_FCLK_CLK0": {
+        "ports": [
+          "ap_clk",
+          "low_pass_filter_first_0/ap_clk",
+          "quadrature_demodulat_0/ap_clk",
+          "low_pass_filter_seco_0/ap_clk",
+          "fir_decimation_filter_r/ap_clk",
+          "fir_decimation_filter_i/ap_clk"
+        ]
+      },
+      "rst_ps7_0_fclk0_peripheral_aresetn": {
+        "ports": [
+          "ap_rst_n",
+          "low_pass_filter_first_0/ap_rst_n",
+          "quadrature_demodulat_0/ap_rst_n",
+          "low_pass_filter_seco_0/ap_rst_n",
+          "fir_decimation_filter_i/ap_rst_n",
+          "fir_decimation_filter_r/ap_rst_n"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,271 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2022.1</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>6.883</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>6.883</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>6.883</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>3.117</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>3.117</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>3.117</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>3.117</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>0</CLB>
+    <DSP>44</DSP>
+    <FF>3284</FF>
+    <LATCH>0</LATCH>
+    <LUT>1981</LUT>
+    <SRL>0</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>280</BRAM>
+    <CLB>0</CLB>
+    <DSP>220</DSP>
+    <FF>106400</FF>
+    <LUT>53200</LUT>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="low_pass_filter_second" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="61">mul_32s_16s_47_2_1_U25 mul_32s_16s_47_2_1_U26 mul_32s_16s_47_2_1_U27 mul_32s_16s_47_2_1_U43 mul_32s_16s_47_2_1_U44 mul_32s_16s_47_2_1_U47 mul_32s_16s_47_2_1_U48 mul_32s_16s_47_2_1_U51 mul_32s_16s_47_2_1_U52 mul_32s_16s_47_2_1_U55 mul_32s_16s_47_2_1_U56 mul_32s_16s_47_2_1_U59 mul_32s_16s_47_2_1_U60 mul_32s_16s_47_2_1_U63 mul_32s_16s_47_2_1_U64 mul_32s_16s_47_2_1_U67 mul_32s_16s_47_2_1_U68 mul_32s_16s_47_2_1_U71 mul_32s_16s_47_2_1_U72 mul_32s_16s_47_2_1_U75 mul_32s_16s_47_2_1_U76 mul_32s_16s_47_2_1_U79 mux_233_32_1_1_U1 mux_233_32_1_1_U10 mux_233_32_1_1_U11 mux_233_32_1_1_U12 mux_233_32_1_1_U13 mux_233_32_1_1_U14 mux_233_32_1_1_U15 mux_233_32_1_1_U16 mux_233_32_1_1_U17 mux_233_32_1_1_U18 mux_233_32_1_1_U19 mux_233_32_1_1_U2 mux_233_32_1_1_U20 mux_233_32_1_1_U21 mux_233_32_1_1_U3 mux_233_32_1_1_U30 mux_233_32_1_1_U31 mux_233_32_1_1_U32 mux_233_32_1_1_U33 mux_233_32_1_1_U34 mux_233_32_1_1_U35 mux_233_32_1_1_U36 mux_233_32_1_1_U37 mux_233_32_1_1_U38 mux_233_32_1_1_U39 mux_233_32_1_1_U4 mux_233_32_1_1_U40 mux_233_32_1_1_U41 mux_233_32_1_1_U42 mux_233_32_1_1_U5 mux_233_32_1_1_U6 mux_233_32_1_1_U7 mux_233_32_1_1_U77 mux_233_32_1_1_U8 mux_233_32_1_1_U9 regslice_both_input_r_V_data_V_U regslice_both_input_r_V_last_V_U regslice_both_output_r_V_data_V_U regslice_both_output_r_V_last_V_U</SubModules>
+    <Resources DSP="44" FF="3284" LUT="1981" LogicLUT="1981"/>
+    <LocalResources FF="3103" LUT="969" LogicLUT="969"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U25" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U26" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U27" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U43" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U44" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U47" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U48" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U51" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U52" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U55" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U56" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U59" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U60" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U63" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U64" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U67" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U68" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U71" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U72" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U75" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U76" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_16s_47_2_1_U79" BINDMODULE="low_pass_filter_second_mul_32s_16s_47_2_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mul_32s_16s_47_2_1">
+    <Resources DSP="2" FF="3" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U1" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U10" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U11" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U12" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U13" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U14" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U15" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U16" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U17" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U18" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U19" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U2" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U20" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U21" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U3" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U30" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U31" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U32" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U33" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U34" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U35" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U36" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U37" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U38" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U39" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U4" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U40" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U41" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U42" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U5" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U6" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U7" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U77" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U8" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mux_233_32_1_1_U9" BINDMODULE="low_pass_filter_second_mux_233_32_1_1" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_mux_233_32_1_1">
+    <Resources LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_input_r_V_data_V_U" BINDMODULE="low_pass_filter_second_regslice_both" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_regslice_both">
+    <Resources FF="68" LUT="41" LogicLUT="41"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_input_r_V_last_V_U" BINDMODULE="low_pass_filter_second_regslice_both" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_regslice_both">
+    <Resources FF="6" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_output_r_V_data_V_U" BINDMODULE="low_pass_filter_second_regslice_both" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_regslice_both">
+    <Resources FF="36" LUT="41" LogicLUT="41"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_output_r_V_last_V_U" BINDMODULE="low_pass_filter_second_regslice_both" DEPTH="1" FILE_NAME="low_pass_filter_second.v" ORIG_REF_NAME="low_pass_filter_second_regslice_both">
+    <Resources FF="6" LUT="7" LogicLUT="7"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="5.399" DATAPATH_LOGIC_DELAY="4.544" DATAPATH_NET_DELAY="0.855" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg/PCIN[0]" LOGIC_LEVELS="1" MAX_FANOUT="13" SLACK="3.117" STARTPOINT_PIN="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="823"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.399" DATAPATH_LOGIC_DELAY="4.544" DATAPATH_NET_DELAY="0.855" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg/PCIN[10]" LOGIC_LEVELS="1" MAX_FANOUT="13" SLACK="3.117" STARTPOINT_PIN="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="823"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.399" DATAPATH_LOGIC_DELAY="4.544" DATAPATH_NET_DELAY="0.855" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg/PCIN[11]" LOGIC_LEVELS="1" MAX_FANOUT="13" SLACK="3.117" STARTPOINT_PIN="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="823"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.399" DATAPATH_LOGIC_DELAY="4.544" DATAPATH_NET_DELAY="0.855" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg/PCIN[12]" LOGIC_LEVELS="1" MAX_FANOUT="13" SLACK="3.117" STARTPOINT_PIN="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="823"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.399" DATAPATH_LOGIC_DELAY="4.544" DATAPATH_NET_DELAY="0.855" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg/PCIN[13]" LOGIC_LEVELS="1" MAX_FANOUT="13" SLACK="3.117" STARTPOINT_PIN="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/tmp_16_reg_2606_reg[6]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="823"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_16s_47_2_1_U25/dout_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="24"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/low_pass_filter_second_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/low_pass_filter_second_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/low_pass_filter_second_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/low_pass_filter_second_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/low_pass_filter_second_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/low_pass_filter_second_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

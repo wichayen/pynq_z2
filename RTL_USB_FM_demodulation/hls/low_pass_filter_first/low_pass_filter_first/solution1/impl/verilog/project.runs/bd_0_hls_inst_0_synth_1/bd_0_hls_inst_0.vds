@@ -1,0 +1,526 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 26 05:31:45 2026
+# Process ID: 20864
+# Current directory: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+# Running On: ndrswcy, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 14, Host memory: 34033 MB
+#-----------------------------------------------------------
+WARNING: [Runs 36-547] User Strategy 'Vivado Synthesis Defaults' from file 'C:\Users\ndrsw\AppData\Roaming/Xilinx/Vivado/2022.1/strategies/Vivado Synthesis Defaults.Vivado Synthesis 2020.psg' discarded because strategy with same name already parsed from 'C:/Xilinx/Vivado/2022.1/strategies/VDS2020.psg'
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.cache/ip 
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z020clg400-1 -directive sdx_optimization_effort_high -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1960
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1404.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'low_pass_filter_first' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first.v:10]
+INFO: [Synth 8-6157] synthesizing module 'low_pass_filter_first_mux_42_32_1_1' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_mux_42_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'low_pass_filter_first_mux_42_32_1_1' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_mux_42_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'low_pass_filter_first_mux_42_16_1_1' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_mux_42_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'low_pass_filter_first_mux_42_16_1_1' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_mux_42_16_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'low_pass_filter_first_mul_32s_16s_47_2_1' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_mul_32s_16s_47_2_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'low_pass_filter_first_mul_32s_16s_47_2_1' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_mul_32s_16s_47_2_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'low_pass_filter_first_regslice_both' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'low_pass_filter_first_regslice_both' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'low_pass_filter_first_regslice_both__parameterized0' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'low_pass_filter_first_regslice_both__parameterized0' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'low_pass_filter_first_regslice_both__parameterized1' [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'low_pass_filter_first_regslice_both__parameterized1' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'low_pass_filter_first' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/2fc6/hdl/verilog/low_pass_filter_first.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+WARNING: [Synth 8-7129] Port reset in module low_pass_filter_first_mul_32s_16s_47_2_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1420.105 ; gain = 16.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1420.105 ; gain = 16.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1420.105 ; gain = 16.066
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1420.105 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/low_pass_filter_first_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/low_pass_filter_first_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1460.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1460.758 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1460.758 ; gain = 56.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1460.758 ; gain = 56.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1460.758 ; gain = 56.719
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1460.758 ; gain = 56.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   47 Bit       Adders := 10    
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      2 Bit         XORs := 1     
++---Registers : 
+	               47 Bit    Registers := 21    
+	               32 Bit    Registers := 75    
+	               16 Bit    Registers := 11    
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 22    
++---Multipliers : 
+	              16x32  Multipliers := 11    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 49    
+	   2 Input   16 Bit        Muxes := 33    
+	   2 Input   10 Bit        Muxes := 2     
+	  11 Input   10 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 9     
+	   4 Input    2 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U35/tmp_product, operation Mode is: A2*B2.
+DSP Report: register tmp_21_reg_1883_reg is absorbed into DSP mul_32s_16s_47_2_1_U35/tmp_product.
+DSP Report: register mul_32s_16s_47_2_1_U35/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U35/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U35/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U35/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U35/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U35/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U35/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_21_reg_1883_reg is absorbed into DSP mul_32s_16s_47_2_1_U35/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U35/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U35/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U35/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U35/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U35/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U35/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U34/tmp_product, operation Mode is: A2*B2.
+DSP Report: register tmp_19_reg_1873_reg is absorbed into DSP mul_32s_16s_47_2_1_U34/tmp_product.
+DSP Report: register mul_32s_16s_47_2_1_U34/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U34/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U34/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U34/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U34/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U34/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U34/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_19_reg_1873_reg is absorbed into DSP mul_32s_16s_47_2_1_U34/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U34/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U34/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U34/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U34/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U34/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U34/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U30/tmp_product, operation Mode is: A2*B2.
+DSP Report: register tmp_17_reg_1833_reg is absorbed into DSP mul_32s_16s_47_2_1_U30/tmp_product.
+DSP Report: register mul_32s_16s_47_2_1_U30/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U30/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U30/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U30/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U30/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U30/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U30/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_17_reg_1833_reg is absorbed into DSP mul_32s_16s_47_2_1_U30/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U30/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U30/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U30/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U30/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U30/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U30/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U29/tmp_product, operation Mode is: A*B2.
+DSP Report: register tmp_15_reg_1828_reg is absorbed into DSP mul_32s_16s_47_2_1_U29/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U29/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U29/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U29/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U29/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U29/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_15_reg_1828_reg is absorbed into DSP mul_32s_16s_47_2_1_U29/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U29/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U29/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U29/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U29/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U29/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U29/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U26/tmp_product, operation Mode is: A*B2.
+DSP Report: register tmp_13_reg_1788_reg is absorbed into DSP mul_32s_16s_47_2_1_U26/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U26/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U26/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U26/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U26/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U26/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_13_reg_1788_reg is absorbed into DSP mul_32s_16s_47_2_1_U26/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U26/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U26/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U26/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U26/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U26/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U26/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U25/tmp_product, operation Mode is: A*B2.
+DSP Report: register tmp_11_reg_1783_reg is absorbed into DSP mul_32s_16s_47_2_1_U25/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U25/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U25/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U25/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U25/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U25/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_11_reg_1783_reg is absorbed into DSP mul_32s_16s_47_2_1_U25/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U25/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U25/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U25/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U25/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U25/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U25/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U22/tmp_product, operation Mode is: A*B2.
+DSP Report: register tmp_8_reg_1733_reg is absorbed into DSP mul_32s_16s_47_2_1_U22/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U22/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U22/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U22/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U22/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U22/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_8_reg_1733_reg is absorbed into DSP mul_32s_16s_47_2_1_U22/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U22/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U22/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U22/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U22/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U22/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U22/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U21/tmp_product, operation Mode is: A*B2.
+DSP Report: register tmp_6_reg_1728_reg is absorbed into DSP mul_32s_16s_47_2_1_U21/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U21/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U21/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U21/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U21/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U21/dout_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register tmp_6_reg_1728_reg is absorbed into DSP mul_32s_16s_47_2_1_U21/dout_reg.
+DSP Report: register mul_32s_16s_47_2_1_U21/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U21/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U21/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U21/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U21/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U21/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U16/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_32s_16s_47_2_1_U16/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U16/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U16/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U16/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U16/dout_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_32s_16s_47_2_1_U16/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U16/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U16/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U16/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U16/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U16/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U15/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_32s_16s_47_2_1_U15/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U15/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U15/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U15/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U15/dout_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_32s_16s_47_2_1_U15/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U15/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U15/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U15/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U15/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U15/dout_reg.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U14/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_32s_16s_47_2_1_U14/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U14/tmp_product.
+DSP Report: operator mul_32s_16s_47_2_1_U14/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U14/tmp_product.
+DSP Report: Generating DSP mul_32s_16s_47_2_1_U14/dout_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_32s_16s_47_2_1_U14/dout_reg is absorbed into DSP mul_32s_16s_47_2_1_U14/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U14/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U14/dout_reg.
+DSP Report: operator mul_32s_16s_47_2_1_U14/tmp_product is absorbed into DSP mul_32s_16s_47_2_1_U14/dout_reg.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[47]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[46]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[45]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[44]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[43]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[42]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[41]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[40]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[39]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[38]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[37]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[36]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[35]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[34]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[33]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[32]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[31]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[30]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[29]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[28]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[27]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[26]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[25]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[24]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[23]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[22]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[21]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[20]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[19]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[18]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[17]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[13]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[12]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[11]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[10]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[9]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[8]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[7]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[6]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[5]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[4]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[3]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[2]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[1]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U35/dout_reg[0]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[47]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[46]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[45]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[44]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[43]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[42]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[41]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[40]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[39]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[38]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[37]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[36]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[35]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[34]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[33]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[32]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[31]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[30]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[29]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[28]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[27]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[26]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[25]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[24]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[23]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[22]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[21]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[20]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[19]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[18]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[17]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[13]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[12]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[11]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[10]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[9]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[8]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[7]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[6]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[5]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[4]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[3]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[2]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[1]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U34/dout_reg[0]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[47]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[46]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[45]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[44]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[43]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[42]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[41]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[40]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[39]) is unused and will be removed from module low_pass_filter_first.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_16s_47_2_1_U30/dout_reg[38]) is unused and will be removed from module low_pass_filter_first.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1460.758 ; gain = 56.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name           | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|low_pass_filter_first | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B2            | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B2            | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B2            | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B2            | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B2            | 18     | 16     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B             | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A*B  | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B             | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A*B  | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A*B             | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17)+A*B  | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++----------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1480.961 ; gain = 76.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1491.059 ; gain = 87.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1519.707 ; gain = 115.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name           | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 14     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|low_pass_filter_first | A'*B'             | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|low_pass_filter_first | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++----------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    98|
+|2     |DSP48E1 |    22|
+|4     |LUT1    |     5|
+|5     |LUT2    |   384|
+|6     |LUT3    |   106|
+|7     |LUT4    |   267|
+|8     |LUT5    |    15|
+|9     |LUT6    |   429|
+|10    |FDRE    |  2511|
+|11    |FDSE    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 497 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1523.141 ; gain = 78.449
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1523.141 ; gain = 119.102
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1535.156 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 120 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1538.871 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 31f44865
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 1538.871 ; gain = 134.832
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = b820c78aaddb547c
+INFO: [Coretcl 2-1174] Renamed 23 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 05:32:19 2026...

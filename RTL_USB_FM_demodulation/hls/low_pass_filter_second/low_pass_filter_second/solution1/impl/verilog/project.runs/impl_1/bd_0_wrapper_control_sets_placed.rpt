@@ -1,0 +1,100 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Sep 26 05:36:53 2026
+| Host         : ndrswcy running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    22 |
+|    Minimum number of control sets                        |    22 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    28 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    22 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    22 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              98 |           38 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              27 |           10 |
+| Yes          | No                    | No                     |            3093 |          831 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              66 |           18 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-----------------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                      Enable Signal                                      |                           Set/Reset Signal                          | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+-----------------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------+----------------+--------------+
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_output_r_V_data_V_U/B_V_data_1_load_B                |                                                                     |                6 |             16 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_output_r_V_data_V_U/B_V_data_1_payload_A[15]_i_1_n_0 |                                                                     |                5 |             16 |         3.20 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_output_r_V_data_V_U/ap_NS_fsm1                       | bd_0_i/hls_inst/inst/regslice_both_output_r_V_data_V_U/SR[0]        |                5 |             23 |         4.60 |
+|  ap_clk      |                                                                                         | bd_0_i/hls_inst/inst/regslice_both_output_r_V_last_V_U/ap_rst_n_inv |               10 |             27 |         2.70 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_V_data_V_U/B_V_data_1_load_B                 |                                                                     |                9 |             32 |         3.56 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_V_data_V_U/B_V_data_1_payload_A[31]_i_1_n_0  |                                                                     |                7 |             32 |         4.57 |
+|  ap_clk      | bd_0_i/hls_inst/inst/count_V0                                                           | bd_0_i/hls_inst/inst/regslice_both_output_r_V_data_V_U/count_V      |               13 |             43 |         3.31 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state13                                                  |                                                                     |                9 |             47 |         5.22 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state6                                                   |                                                                     |               17 |             71 |         4.18 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state9                                                   |                                                                     |               22 |             71 |         3.23 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state10                                                  |                                                                     |               25 |             71 |         2.84 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state7                                                   |                                                                     |               19 |             71 |         3.74 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state11                                                  |                                                                     |               18 |             71 |         3.94 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state4                                                   |                                                                     |               17 |             71 |         4.18 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state3                                                   |                                                                     |               19 |             71 |         3.74 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state8                                                   |                                                                     |               19 |             71 |         3.74 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state12                                                  |                                                                     |               19 |             71 |         3.74 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state5                                                   |                                                                     |               16 |             71 |         4.44 |
+|  ap_clk      |                                                                                         |                                                                     |               38 |             98 |         2.58 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_V_data_V_U/E[0]                              |                                                                     |              206 |            704 |         3.42 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_V_data_V_U/count_V_reg[0][0]                 |                                                                     |              210 |            704 |         3.35 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_V_data_V_U/input_r_TREADY_int_regslice       |                                                                     |              188 |            832 |         4.43 |
++--------------+-----------------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------+----------------+--------------+
+
+
