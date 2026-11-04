@@ -1,0 +1,18 @@
+
+IMAGE_FEATURES:append = " x11-base tools-sdk dev-pkgs"
+
+IMAGE_INSTALL:append = " \
+    xserver-xorg \
+    xserver-nodm-init \
+    xf86-input-libinput \
+    xf86-input-evdev \
+    xf86-video-fbdev \
+    openbox \
+    xterm \
+    libdrm-tests \
+    evtest \
+    usbutils \
+    gcc \
+    make \
+    binutils \
+"

@@ -1,0 +1,65 @@
+/include/ "system-conf.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+
+&i2c0 {
+    clock-frequency = <100000>;
+    status = "okay";
+};
+
+&amba_pl {
+    digilent_hdmi {
+        compatible = "digilent,hdmi";
+
+        clocks = <&video_axi_dynclk_0>;
+        clock-names = "clk";
+
+        digilent,edid-i2c = <&i2c0>;
+        digilent,fmax = <142000>;
+
+        port@0 {
+            hdmi_ep: endpoint {
+                remote-endpoint = <&pl_disp_ep>;
+            };
+        };
+    };
+
+    xlnx_pl_disp {
+        compatible = "xlnx,pl-disp";
+
+        dmas = <&video_axi_vdma_0 0>;
+        dma-names = "dma0";
+
+        /* xlnx,vtc = <&video_v_tc_0>; */
+        /* dglnt,edid-i2c = <&i2c1>; */
+
+        xlnx,vformat = "RG24"; /* XR24 */
+        xlnx,bridge = <&video_v_tc_0>;
+
+        port@0 {
+            pl_disp_ep: endpoint {
+                remote-endpoint = <&hdmi_ep>;
+            };
+        };
+    };
+};
+
+&video_axi_vdma_0 {
+    dma-ranges = <0x00000000 0x00000000 0x40000000>;
+};
+
+&video_axi_dynclk_0 {
+    compatible = "dglnt,axi-dynclk";
+
+    #clock-cells = <0>;
+    clocks = <&clkc 15>;
+};
+
+&video_v_tc_0 {
+    compatible = "xlnx,bridge-v-tc-6.1";
+    xlnx,pixels-per-clock = <1>;
+
+    /* clock-names = "s_axi_aclk", "clk"; */
+    /* clocks = <&clkc 15>, <&video_axi_dynclk_0>; */
+};
+
