@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.1
+Project:             fir_decimation_filter
+Solution:            solution1
+Device target:       xc7z020-clg400-1
+Report date:         Sat Sep 26 05:29:44 +0700 2026
+
+#=== Post-Implementation Resource usage ===
+SLICE:          122
+LUT:            172
+FF:             364
+DSP:              5
+BRAM:             0
+URAM:             0
+LATCH:            0
+SRL:              0
+CLB:              0
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      4.691
+CP achieved post-implementation: 6.516
+Timing met

@@ -1,0 +1,129 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Addressing View_Layers":"/rst_ps7_0_fclk3_peripheral_aresetn:false|/ps7_0_FCLK_CLK3:false|/rst_ps7_0_fclk0_interconnect_aresetn:false|/rst_ps7_0_fclk3_interconnect_aresetn:false|/ps7_0_FCLK_CLK1:false|/ps7_0_FCLK_RESET0_N:false|/ps7_0_FCLK_CLK0:false|/rst_ps7_0_fclk0_peripheral_aresetn:false|",
+   "Addressing View_ScaleFactor":"0.655435",
+   "Addressing View_TopLeft":"-145,0",
+   "Default View_Layers":"/rst_ps7_0_fclk3_peripheral_aresetn:true|/ps7_0_FCLK_CLK3:true|/rst_ps7_0_fclk0_interconnect_aresetn:true|/rst_ps7_0_fclk3_interconnect_aresetn:true|/ps7_0_FCLK_CLK1:true|/ps7_0_FCLK_RESET0_N:true|/ps7_0_FCLK_CLK0:true|/rst_ps7_0_fclk0_peripheral_aresetn:true|",
+   "Default View_ScaleFactor":"0.717936",
+   "Default View_TopLeft":"4255,953",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "PinnedBlocks":"/rst_ps7_0_fclk3|/ps7_0_axi_periph1|/axi_protocol_convert_0|/simple_io_0|/ps7_0|/ps7_0_axi_periph|/rst_ps7_0_fclk0|/rst_ps7_0_fclk1|",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 6340 -y 460 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 6340 -y 480 -defaultsOSRD
+preplace port IIC_1 -pg 1 -lvl 5 -x 6340 -y 500 -defaultsOSRD
+preplace port Vaux1 -pg 1 -lvl 0 -x -840 -y -60 -defaultsOSRD
+preplace port Vaux5 -pg 1 -lvl 0 -x -840 -y -40 -defaultsOSRD
+preplace port Vaux6 -pg 1 -lvl 0 -x -840 -y -20 -defaultsOSRD
+preplace port Vaux9 -pg 1 -lvl 0 -x -840 -y 0 -defaultsOSRD
+preplace port Vaux13 -pg 1 -lvl 0 -x -840 -y 20 -defaultsOSRD
+preplace port Vaux15 -pg 1 -lvl 0 -x -840 -y 40 -defaultsOSRD
+preplace port Vp_Vn -pg 1 -lvl 0 -x -840 -y 60 -defaultsOSRD
+preplace port arduino_direct_iic -pg 1 -lvl 5 -x 6340 -y -60 -defaultsOSRD
+preplace port arduino_direct_spi -pg 1 -lvl 5 -x 6340 -y -40 -defaultsOSRD
+preplace port arduino_gpio -pg 1 -lvl 5 -x 6340 -y -20 -defaultsOSRD
+preplace port btns_4bits -pg 1 -lvl 5 -x 6340 -y 1170 -defaultsOSRD
+preplace port hdmi_in_ddc -pg 1 -lvl 5 -x 6340 -y 60 -defaultsOSRD
+preplace port leds_4bits -pg 1 -lvl 5 -x 6340 -y 1360 -defaultsOSRD
+preplace port pmoda_rpi_gpio -pg 1 -lvl 5 -x 6340 -y 140 -defaultsOSRD
+preplace port pmodb_gpio -pg 1 -lvl 5 -x 6340 -y 160 -defaultsOSRD
+preplace port rgbleds_6bits -pg 1 -lvl 5 -x 6340 -y 890 -defaultsOSRD
+preplace port rpi_gpio -pg 1 -lvl 5 -x 6340 -y 180 -defaultsOSRD
+preplace port sws_2bits -pg 1 -lvl 5 -x 6340 -y 1030 -defaultsOSRD
+preplace port M_AXI_0 -pg 1 -lvl 5 -x 6340 -y 230 -defaultsOSRD
+preplace port LCD_SPI -pg 1 -lvl 5 -x 6340 -y 600 -defaultsOSRD
+preplace port LCD_GPIO -pg 1 -lvl 5 -x 6340 -y 760 -defaultsOSRD
+preplace port hdmi_out -pg 1 -lvl 5 -x 6340 -y 1570 -defaultsOSRD
+preplace port port-id_audio_clk_10MHz -pg 1 -lvl 5 -x 6340 -y 1810 -defaultsOSRD
+preplace port port-id_bclk -pg 1 -lvl 5 -x 6340 -y 1940 -defaultsOSRD
+preplace port port-id_lrclk -pg 1 -lvl 5 -x 6340 -y 1960 -defaultsOSRD
+preplace port port-id_sdata_i -pg 1 -lvl 0 -x -840 -y 1960 -defaultsOSRD
+preplace port port-id_sdata_o -pg 1 -lvl 5 -x 6340 -y 1980 -defaultsOSRD
+preplace port port-id_M_AXI_0_CLK -pg 1 -lvl 5 -x 6340 -y 440 -defaultsOSRD
+preplace portBus codec_addr -pg 1 -lvl 5 -x 6340 -y 2000 -defaultsOSRD
+preplace portBus hdmi_in_hpd -pg 1 -lvl 5 -x 6340 -y 80 -defaultsOSRD
+preplace portBus hdmi_out_hpd -pg 1 -lvl 5 -x 6340 -y 100 -defaultsOSRD
+preplace portBus GPIO_0 -pg 1 -lvl 5 -x 6340 -y 370 -defaultsOSRD
+preplace portBus M_AXI_0_ARESETN -pg 1 -lvl 5 -x 6340 -y 250 -defaultsOSRD
+preplace inst btns_gpio -pg 1 -lvl 4 -x 6140 -y 1250 -defaultsOSRD
+preplace inst leds_gpio -pg 1 -lvl 4 -x 6140 -y 1390 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 5383 -y 1150 -defaultsOSRD
+preplace inst rgbleds_gpio -pg 1 -lvl 4 -x 6140 -y 970 -defaultsOSRD
+preplace inst rst_ps7_0_fclk0 -pg 1 -lvl 2 -x 4793 -y 990 -defaultsOSRD
+preplace inst rst_ps7_0_fclk1 -pg 1 -lvl 2 -x 4793 -y 1170 -defaultsOSRD
+preplace inst rst_ps7_0_fclk3 -pg 1 -lvl 2 -x 4793 -y 160 -defaultsOSRD
+preplace inst switches_gpio -pg 1 -lvl 4 -x 6140 -y 1110 -defaultsOSRD
+preplace inst simple_io_0 -pg 1 -lvl 4 -x 6140 -y 370 -defaultsOSRD
+preplace inst ps7_0_axi_periph1 -pg 1 -lvl 3 -x 5383 -y 240 -defaultsOSRD
+preplace inst axi_protocol_convert_0 -pg 1 -lvl 4 -x 6140 -y 230 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x -580 -y 3198 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 4 -x 6140 -y 610 -defaultsOSRD
+preplace inst lcd_gpio -pg 1 -lvl 4 -x 6140 -y 760 -defaultsOSRD
+preplace inst video -pg 1 -lvl 4 -x 6140 -y 1610 -defaultsOSRD
+preplace inst rtl_sdr -pg 1 -lvl 1 -x -580 -y 120 -defaultsOSRD
+preplace inst ps7_0 -pg 1 -lvl 2 -x 4793 -y 550 -defaultsOSRD
+preplace inst clk_wiz_10MHz -pg 1 -lvl 4 -x 6140 -y 1800 -defaultsOSRD
+preplace inst audio_codec_ctrl_0 -pg 1 -lvl 4 -x 6140 -y 1970 -defaultsOSRD
+preplace netloc Net 1 4 1 NJ 370
+preplace netloc aresetn_1 1 2 2 5040J 1450 5540
+preplace netloc audio_codec_ctrl_0_bclk 1 4 1 N 1940
+preplace netloc audio_codec_ctrl_0_codec_address 1 4 1 N 2000
+preplace netloc audio_codec_ctrl_0_lrclk 1 4 1 N 1960
+preplace netloc audio_codec_ctrl_0_sdata_o 1 4 1 N 1980
+preplace netloc axi_quad_spi_0_ip2intc_irpt 1 0 5 -800 860 NJ 860 NJ 860 NJ 860 6290
+preplace netloc clk_wiz_10MHz_clk_out1 1 4 1 6290 1790n
+preplace netloc ps7_0_FCLK_CLK0 1 0 4 -800 370 -440 370 5080 1440 5630
+preplace netloc ps7_0_FCLK_CLK1 1 1 3 -400 380 5030 850 5590
+preplace netloc ps7_0_FCLK_CLK3 1 1 4 -410 60 5050 20 5670 450 6290
+preplace netloc ps7_0_FCLK_RESET0_N 1 1 2 -420 720 5040
+preplace netloc rst_ps7_0_fclk0_interconnect_aresetn 1 2 1 5040 970n
+preplace netloc rst_ps7_0_fclk0_peripheral_aresetn 1 0 4 -780 1270 N 1270 5060 1430 5650
+preplace netloc rst_ps7_0_fclk3_interconnect_aresetn 1 2 1 5030 140n
+preplace netloc rst_ps7_0_fclk3_peripheral_aresetn 1 2 3 5040 30 5650 150 6290J
+preplace netloc rtl_sdr_mm2s_introut 1 0 2 -820 20 -460J
+preplace netloc rtl_sdr_s2mm_introut 1 0 2 -810 210 -460J
+preplace netloc sdata_i_1 1 0 4 NJ 1960 NJ 1960 NJ 1960 5550
+preplace netloc video_irq 1 0 5 -790 1720 NJ 1720 N 1720 N 1720 6290
+preplace netloc video_mm2s_introut 1 0 5 -780 1730 NJ 1730 N 1730 N 1730 6300
+preplace netloc xlconcat_0_dout 1 1 1 -430 660n
+preplace netloc axi_protocol_convert_0_M_AXI 1 4 1 N 230
+preplace netloc axi_quad_spi_0_SPI_0 1 4 1 N 600
+preplace netloc btns_gpio_GPIO 1 4 1 6300J 1170n
+preplace netloc lcd_gpio_GPIO 1 4 1 N 760
+preplace netloc leds_gpio_GPIO 1 4 1 6300J 1360n
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 480 NJ 480 NJ
+preplace netloc ps7_0_DDR 1 2 3 NJ 460 NJ 460 NJ
+preplace netloc ps7_0_IIC_1 1 2 3 NJ 500 NJ 500 NJ
+preplace netloc ps7_0_M_AXI_GP0 1 2 1 5070 540n
+preplace netloc ps7_0_M_AXI_GP1 1 2 1 5060 100n
+preplace netloc ps7_0_axi_periph1_M00_AXI 1 3 1 5680 200n
+preplace netloc ps7_0_axi_periph1_M01_AXI 1 3 1 5660 220n
+preplace netloc ps7_0_axi_periph1_M03_AXI 1 3 1 5640 260n
+preplace netloc ps7_0_axi_periph1_M04_AXI 1 3 1 5630 280n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 5610 1070n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 5580 1090n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 5600 950n
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 5560 1130n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 5670 1090n
+preplace netloc ps7_0_axi_periph_M05_AXI 1 3 1 5600 1170n
+preplace netloc ps7_0_axi_periph_M06_AXI 1 0 4 -810 10 N 10 N 10 5550
+preplace netloc ps7_0_axi_periph_M07_AXI 1 3 1 5570 1210n
+preplace netloc ps7_0_axi_periph_M08_AXI 1 3 1 5550 1230n
+preplace netloc rgbled_gpio_GPIO 1 4 1 6300J 890n
+preplace netloc rtl_sdr_M00_AXI 1 1 1 -430 80n
+preplace netloc rtl_sdr_M00_AXI1 1 1 1 -450 100n
+preplace netloc rtl_sdr_M01_AXIS 1 1 3 -440 40 N 40 5620
+preplace netloc swsleds_gpio_GPIO 1 4 1 6300J 1030n
+preplace netloc video_M00_AXI 1 1 4 -390 870 N 870 N 870 6290
+preplace netloc video_TMDS 1 4 1 N 1570
+levelinfo -pg 1 -840 -580 4793 5383 6140 6340
+pagesize -pg 1 -db -bbox -sgen -940 -290 6560 4530
+"
+}
+{
+   "da_axi4_cnt":"1"
+}

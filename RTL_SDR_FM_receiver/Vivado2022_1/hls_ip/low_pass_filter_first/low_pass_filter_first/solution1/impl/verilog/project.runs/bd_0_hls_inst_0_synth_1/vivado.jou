@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 26 05:31:45 2026
+# Process ID: 20864
+# Current directory: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: D:/xilinx/SDR/PYNQ_Z2_FM_Radio-main/hls/low_pass_filter_first/low_pass_filter_first/solution1/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+# Running On: ndrswcy, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 14, Host memory: 34033 MB
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace

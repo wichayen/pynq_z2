@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="low_pass_filter_first" xd:componentRef="low_pass_filter_first" xd:initiationInterval="10" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="input" xd:originalName="input" xd:direction="in" xd:interfaceRef="input_r" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="output" xd:originalName="output" xd:direction="out" xd:interfaceRef="output_r" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="9" xd:worst-case="9" xd:average-case="9"/>
+  <xd:resourceEstimates xd:LUT="1811" xd:FF="4757" xd:BRAM="0" xd:DSP="22"/>
+</xd:acceleratorMap>

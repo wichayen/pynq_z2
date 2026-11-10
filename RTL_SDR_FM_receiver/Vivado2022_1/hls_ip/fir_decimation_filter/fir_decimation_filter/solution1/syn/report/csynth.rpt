@@ -1,0 +1,115 @@
+
+
+================================================================
+== Synthesis Summary Report of 'fir_decimation_filter'
+================================================================
++ General Information: 
+    * Date:           Fri Oct  2 11:23:21 2026
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        fir_decimation_filter
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |         Modules         | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |        |           |           |     |
+    |         & Loops         | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT    | URAM|
+    +-------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |+ fir_decimation_filter  |     -|  0.83|        6|  60.000|         -|        7|     -|        no|     -|  5 (2%)|  334 (~0%)|  411 (~0%)|    -|
+    +-------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| input_r   | both          | 8     | 1     | 1     | 1      | 1     | 1      |
+| output_r  | both          | 32    | 4     | 1     | 1      | 4     | 1      |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------------------------------------------------------------+
+| Argument | Direction | Datatype                                                             |
++----------+-----------+----------------------------------------------------------------------+
+| input    | in        | stream<hls::axis<ap_fixed<8, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>&   |
+| output   | out       | stream<hls::axis<ap_fixed<32, 10, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>& |
++----------+-----------+----------------------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | input_r      | interface |
+| output   | output_r     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                               | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + fir_decimation_filter            | 5   |        |             |     |        |         |
+|   sub_i_i220_fu_186_p2             | -   |        | sub_i_i220  | sub | fabric | 0       |
+|   mul_mul_16s_8s_24_4_1_U10        | 1   |        | r_V_14      | mul | dsp48  | 3       |
+|   mac_muladd_16s_8s_24s_25_4_1_U12 | 1   |        | r_V_10      | mul | dsp48  | 3       |
+|   mac_muladd_16s_8s_25s_25_4_1_U14 | 1   |        | r_V_11      | mul | dsp48  | 3       |
+|   mul_mul_16s_8s_24_4_1_U11        | 1   |        | r_V_12      | mul | dsp48  | 3       |
+|   mac_muladd_16s_8s_24s_25_4_1_U13 | 1   |        | r_V_13      | mul | dsp48  | 3       |
+|   mac_muladd_16s_8s_24s_25_4_1_U13 | 1   |        | add_ln859   | add | dsp48  | 3       |
+|   mac_muladd_16s_8s_24s_25_4_1_U12 | 1   |        | add_ln859_2 | add | dsp48  | 3       |
+|   mac_muladd_16s_8s_25s_25_4_1_U14 | 1   |        | add_ln859_3 | add | dsp48  | 3       |
+|   add_ln886_fu_611_p2              | -   |        | add_ln886   | add | fabric | 0       |
++------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------------------+-------------------------------------------------------+
+| Type            | Options                                           | Location                                              |
++-----------------+---------------------------------------------------+-------------------------------------------------------+
+| interface       | mode = axis port = input                          | fir_decimation_filter.cpp:18 in fir_decimation_filter |
+| interface       | mode = axis port = output                         | fir_decimation_filter.cpp:19 in fir_decimation_filter |
+| interface       | mode = ap_ctrl_none port = return                 | fir_decimation_filter.cpp:20 in fir_decimation_filter |
+| array_partition | variable = coefficient type = complete dim = 0    | fir_decimation_filter.cpp:30 in fir_decimation_filter |
+| array_partition | variable = shift_register type = complete dim = 0 | fir_decimation_filter.cpp:31 in fir_decimation_filter |
+| unroll          |                                                   | fir_decimation_filter.cpp:41 in fir_decimation_filter |
+| unroll          |                                                   | fir_decimation_filter.cpp:48 in fir_decimation_filter |
++-----------------+---------------------------------------------------+-------------------------------------------------------+
+
+

@@ -1,0 +1,152 @@
+
+
+================================================================
+== Synthesis Summary Report of 'low_pass_filter_second'
+================================================================
++ General Information: 
+    * Date:           Sat Sep 26 05:34:26 2026
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        low_pass_filter_second
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------+------+------+---------+---------+----------+---------+------+----------+------+----------+-----------+-----------+-----+
+    |          Modules         | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |          |           |           |     |
+    |          & Loops         | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF    |    LUT    | URAM|
+    +--------------------------+------+------+---------+---------+----------+---------+------+----------+------+----------+-----------+-----------+-----+
+    |+ low_pass_filter_second  |     -|  0.39|       14|  140.000|         -|       15|     -|        no|     -|  44 (20%)|  8381 (7%)|  3194 (6%)|    -|
+    +--------------------------+------+------+---------+---------+----------+---------+------+----------+------+----------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| input_r   | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| output_r  | both          | 16    | 2     | 1     | 1      | 2     | 1      |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------------------------------------------------------------+
+| Argument | Direction | Datatype                                                             |
++----------+-----------+----------------------------------------------------------------------+
+| input    | in        | stream<hls::axis<ap_fixed<32, 10, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>& |
+| output   | out       | stream<hls::axis<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0, 0, 0>, 0>&  |
++----------+-----------+----------------------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | input_r      | interface |
+| output   | output_r     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------+-----+--------+---------------+-----+--------+---------+
+| Name                     | DSP | Pragma | Variable      | Op  | Impl   | Latency |
++--------------------------+-----+--------+---------------+-----+--------+---------+
+| + low_pass_filter_second | 44  |        |               |     |        |         |
+|   sub_i_i226_fu_494_p2   | -   |        | sub_i_i226    | sub | fabric | 0       |
+|   mul_32s_16s_47_2_1_U25 | 2   |        | mul_ln1316    | mul | auto   | 1       |
+|   mul_32s_16s_47_2_1_U26 | 2   |        | mul_ln1393    | mul | auto   | 1       |
+|   ret_V_fu_1410_p2       | -   |        | ret_V         | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U27 | 2   |        | mul_ln1393_1  | mul | auto   | 1       |
+|   ret_V_1_fu_1433_p2     | -   |        | ret_V_1       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U43 | 2   |        | mul_ln1393_2  | mul | auto   | 1       |
+|   ret_V_2_fu_1497_p2     | -   |        | ret_V_2       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U44 | 2   |        | mul_ln1393_3  | mul | auto   | 1       |
+|   ret_V_3_fu_1520_p2     | -   |        | ret_V_3       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U47 | 2   |        | mul_ln1393_4  | mul | auto   | 1       |
+|   ret_V_4_fu_1584_p2     | -   |        | ret_V_4       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U48 | 2   |        | mul_ln1393_5  | mul | auto   | 1       |
+|   ret_V_5_fu_1607_p2     | -   |        | ret_V_5       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U51 | 2   |        | mul_ln1393_6  | mul | auto   | 1       |
+|   ret_V_6_fu_1671_p2     | -   |        | ret_V_6       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U52 | 2   |        | mul_ln1393_7  | mul | auto   | 1       |
+|   ret_V_7_fu_1694_p2     | -   |        | ret_V_7       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U55 | 2   |        | mul_ln1393_8  | mul | auto   | 1       |
+|   ret_V_8_fu_1758_p2     | -   |        | ret_V_8       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U56 | 2   |        | mul_ln1393_9  | mul | auto   | 1       |
+|   ret_V_9_fu_1781_p2     | -   |        | ret_V_9       | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U59 | 2   |        | mul_ln1393_10 | mul | auto   | 1       |
+|   ret_V_10_fu_1845_p2    | -   |        | ret_V_10      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U60 | 2   |        | mul_ln1393_11 | mul | auto   | 1       |
+|   ret_V_11_fu_1868_p2    | -   |        | ret_V_11      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U63 | 2   |        | mul_ln1393_12 | mul | auto   | 1       |
+|   ret_V_12_fu_1932_p2    | -   |        | ret_V_12      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U64 | 2   |        | mul_ln1393_13 | mul | auto   | 1       |
+|   ret_V_13_fu_1955_p2    | -   |        | ret_V_13      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U67 | 2   |        | mul_ln1393_14 | mul | auto   | 1       |
+|   ret_V_14_fu_2019_p2    | -   |        | ret_V_14      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U68 | 2   |        | mul_ln1393_15 | mul | auto   | 1       |
+|   ret_V_15_fu_2042_p2    | -   |        | ret_V_15      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U71 | 2   |        | mul_ln1393_16 | mul | auto   | 1       |
+|   ret_V_16_fu_2114_p2    | -   |        | ret_V_16      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U72 | 2   |        | mul_ln1393_17 | mul | auto   | 1       |
+|   ret_V_17_fu_2137_p2    | -   |        | ret_V_17      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U75 | 2   |        | mul_ln1393_18 | mul | auto   | 1       |
+|   ret_V_18_fu_2171_p2    | -   |        | ret_V_18      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U76 | 2   |        | mul_ln1393_19 | mul | auto   | 1       |
+|   ret_V_19_fu_2194_p2    | -   |        | ret_V_19      | add | fabric | 0       |
+|   mul_32s_16s_47_2_1_U79 | 2   |        | mul_ln1393_20 | mul | auto   | 1       |
+|   ret_V_20_fu_2216_p2    | -   |        | ret_V_20      | add | fabric | 0       |
+|   add_ln859_fu_2249_p2   | -   |        | add_ln859     | add | fabric | 0       |
+|   add_ln1065_fu_2255_p2  | -   |        | add_ln1065    | add | fabric | 0       |
+|   add_ln886_fu_2266_p2   | -   |        | add_ln886     | add | fabric | 0       |
++--------------------------+-----+--------+---------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------------------+---------------------------------------------------------+
+| Type            | Options                                           | Location                                                |
++-----------------+---------------------------------------------------+---------------------------------------------------------+
+| interface       | mode = axis port = input                          | low_pass_filter_second.cpp:18 in low_pass_filter_second |
+| interface       | mode = axis port = output                         | low_pass_filter_second.cpp:19 in low_pass_filter_second |
+| interface       | mode = ap_ctrl_none port = return                 | low_pass_filter_second.cpp:20 in low_pass_filter_second |
+| array_partition | variable = coefficient type = complete dim = 0    | low_pass_filter_second.cpp:27 in low_pass_filter_second |
+| array_partition | variable = shift_register type = complete dim = 0 | low_pass_filter_second.cpp:28 in low_pass_filter_second |
+| unroll          |                                                   | low_pass_filter_second.cpp:38 in low_pass_filter_second |
+| unroll          |                                                   | low_pass_filter_second.cpp:45 in low_pass_filter_second |
++-----------------+---------------------------------------------------+---------------------------------------------------------+
+
+

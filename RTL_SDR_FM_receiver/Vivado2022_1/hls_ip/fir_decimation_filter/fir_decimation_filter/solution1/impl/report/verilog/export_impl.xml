@@ -1,0 +1,160 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>impl</RUN_TYPE>
+    <VIVADO_VERSION>v.2022.1</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>6.516</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>6.516</CP_FINAL>
+    <CP_ROUTE>6.516</CP_ROUTE>
+    <CP_SYNTH>4.691</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>3.484</SLACK_FINAL>
+    <SLACK_ROUTE>3.484</SLACK_ROUTE>
+    <SLACK_SYNTH>5.309</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>0.000</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>3.484</WNS_FINAL>
+    <WNS_ROUTE>3.484</WNS_ROUTE>
+    <WNS_SYNTH>5.309</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>0</BRAM>
+      <CLB>0</CLB>
+      <DSP>5</DSP>
+      <FF>364</FF>
+      <LATCH>0</LATCH>
+      <LUT>172</LUT>
+      <SLICE>122</SLICE>
+      <SRL>0</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <SLICE>13300</SLICE>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="fir_decimation_filter" DISPNAME="inst" RTLNAME="fir_decimation_filter">
+      <SubModules count="9">mac_muladd_16s_8s_24s_25_4_1_U12 mac_muladd_16s_8s_24s_25_4_1_U13 mac_muladd_16s_8s_25s_25_4_1_U14 mux_533_16_1_1_U8 mux_533_16_1_1_U9 regslice_both_input_r_V_data_V_U regslice_both_input_r_V_last_V_U regslice_both_output_r_V_data_V_U regslice_both_output_r_V_last_V_U</SubModules>
+      <Resources DSP="5" FF="364" LUT="172"/>
+      <LocalResources FF="264" LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_16s_8s_24s_25_4_1_U12" BINDMODULE="fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_16s_8s_24s_25_4_1" DISPNAME="mac_muladd_16s_8s_24s_25_4_1_U12" RTLNAME="fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1">
+      <Resources DSP="2" LUT="25"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24s_25_4_1_U12" SOURCE="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319" URAM="0" VARIABLE="r_V_10"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24s_25_4_1_U12" SOURCE="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:859" URAM="0" VARIABLE="add_ln859_2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_16s_8s_24s_25_4_1_U13" BINDMODULE="fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_16s_8s_24s_25_4_1" DISPNAME="mac_muladd_16s_8s_24s_25_4_1_U13" RTLNAME="fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1">
+      <Resources DSP="2" LUT="38"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24s_25_4_1_U13" SOURCE="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319" URAM="0" VARIABLE="r_V_13"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8s_24s_25_4_1_U13" SOURCE="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:859" URAM="0" VARIABLE="add_ln859"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mac_muladd_16s_8s_25s_25_4_1_U14" BINDMODULE="fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1" DEPTH="1" TYPE="resource" MODULENAME="mac_muladd_16s_8s_25s_25_4_1" DISPNAME="mac_muladd_16s_8s_25s_25_4_1_U14" RTLNAME="fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1">
+      <Resources DSP="1" LUT="46"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_8s_25s_25_4_1_U14" SOURCE="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319" URAM="0" VARIABLE="r_V_11"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_8s_25s_25_4_1_U14" SOURCE="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:859" URAM="0" VARIABLE="add_ln859_3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mux_533_16_1_1_U8" BINDMODULE="fir_decimation_filter_mux_533_16_1_1" DEPTH="1" TYPE="rtl" MODULENAME="mux_533_16_1_1" DISPNAME="mux_533_16_1_1_U8" RTLNAME="fir_decimation_filter_mux_533_16_1_1">
+      <Resources LUT="3"/>
+    </RtlModule>
+    <RtlModule CELL="inst/mux_533_16_1_1_U9" BINDMODULE="fir_decimation_filter_mux_533_16_1_1" DEPTH="1" TYPE="rtl" MODULENAME="mux_533_16_1_1" DISPNAME="mux_533_16_1_1_U9" RTLNAME="fir_decimation_filter_mux_533_16_1_1">
+      <Resources LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/regslice_both_input_r_V_data_V_U" BINDMODULE="fir_decimation_filter_regslice_both" DEPTH="1" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_input_r_V_data_V_U" RTLNAME="fir_decimation_filter_regslice_both">
+      <Resources FF="20" LUT="14"/>
+    </RtlModule>
+    <RtlModule CELL="inst/regslice_both_input_r_V_last_V_U" BINDMODULE="fir_decimation_filter_regslice_both" DEPTH="1" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_input_r_V_last_V_U" RTLNAME="fir_decimation_filter_regslice_both">
+      <Resources FF="6" LUT="7"/>
+    </RtlModule>
+    <RtlModule CELL="inst/regslice_both_output_r_V_data_V_U" BINDMODULE="fir_decimation_filter_regslice_both" DEPTH="1" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_output_r_V_data_V_U" RTLNAME="fir_decimation_filter_regslice_both">
+      <Resources FF="68" LUT="34"/>
+    </RtlModule>
+    <RtlModule CELL="inst/regslice_both_output_r_V_last_V_U" BINDMODULE="fir_decimation_filter_regslice_both" DEPTH="1" TYPE="rtl" MODULENAME="regslice_both" DISPNAME="regslice_both_output_r_V_last_V_U" RTLNAME="fir_decimation_filter_regslice_both">
+      <Resources FF="6" LUT="6"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="5.982" DATAPATH_LOGIC_DELAY="0.704" DATAPATH_NET_DELAY="5.278" ENDPOINT_PIN="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_reg_reg/B[0]" LOGIC_LEVELS="2" MAX_FANOUT="92" SLACK="3.484" STARTPOINT_PIN="count_V_reg[1]/C">
+      <CELL NAME="count_V_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="577"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[0]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="109"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="113"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.430" DATAPATH_LOGIC_DELAY="0.704" DATAPATH_NET_DELAY="4.726" ENDPOINT_PIN="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_reg_reg/B[3]" LOGIC_LEVELS="2" MAX_FANOUT="92" SLACK="4.036" STARTPOINT_PIN="count_V_reg[1]/C">
+      <CELL NAME="count_V_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="577"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[3]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="109"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[3]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="113"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.762" DATAPATH_LOGIC_DELAY="0.704" DATAPATH_NET_DELAY="5.058" ENDPOINT_PIN="p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5_reg[0]/D" LOGIC_LEVELS="2" MAX_FANOUT="92" SLACK="4.123" STARTPOINT_PIN="count_V_reg[1]/C">
+      <CELL NAME="count_V_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="577"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[0]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="109"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="113"/>
+      <CELL NAME="p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="228"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.757" DATAPATH_LOGIC_DELAY="0.704" DATAPATH_NET_DELAY="5.053" ENDPOINT_PIN="p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_1_reg[0]/D" LOGIC_LEVELS="2" MAX_FANOUT="92" SLACK="4.127" STARTPOINT_PIN="count_V_reg[1]/C">
+      <CELL NAME="count_V_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="577"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[0]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="109"/>
+      <CELL NAME="mac_muladd_16s_8s_25s_25_4_1_U14/fir_decimation_filter_mac_muladd_16s_8s_25s_25_4_1_DSP48_2_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="113"/>
+      <CELL NAME="p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_1_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="229"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.335" DATAPATH_LOGIC_DELAY="0.704" DATAPATH_NET_DELAY="4.631" ENDPOINT_PIN="mac_muladd_16s_8s_24s_25_4_1_U12/fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1_DSP48_1_U/m_reg_reg/B[10]" LOGIC_LEVELS="2" MAX_FANOUT="92" SLACK="4.131" STARTPOINT_PIN="count_V_reg[0]/C">
+      <CELL NAME="count_V_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="577"/>
+      <CELL NAME="mac_muladd_16s_8s_24s_25_4_1_U12/fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1_DSP48_1_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_6[7]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="109"/>
+      <CELL NAME="mac_muladd_16s_8s_24s_25_4_1_U12/fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1_DSP48_1_U/p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_6[7]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="113"/>
+      <CELL NAME="mac_muladd_16s_8s_24s_25_4_1_U12/fir_decimation_filter_mac_muladd_16s_8s_24s_25_4_1_DSP48_1_U/m_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="31"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/fir_decimation_filter_design_analysis_routed.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/fir_decimation_filter_failfast_routed.rpt"/>
+    <ReportFile TYPE="status" PATH="verilog/report/fir_decimation_filter_status_routed.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/fir_decimation_filter_timing_routed.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/fir_decimation_filter_timing_paths_routed.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/fir_decimation_filter_utilization_routed.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/fir_decimation_filter_utilization_hierarchical_routed.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Sat Sep 26 05:29:44 +0700 2026"/>
+    <item NAME="Version" VALUE="2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)"/>
+    <item NAME="Project" VALUE="fir_decimation_filter"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg400-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="Place &amp; Route target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Impl NAME="Place &amp; Route Options">
+      <item NAME="config_export -vivado_impl_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_phys_opt" VALUE="none"/>
+      <item NAME="config_export -vivado_pblock" VALUE=""/>
+    </Impl>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

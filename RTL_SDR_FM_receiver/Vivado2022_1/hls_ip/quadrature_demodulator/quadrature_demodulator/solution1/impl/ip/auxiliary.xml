@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="quadrature_demodulator" xd:componentRef="quadrature_demodulator" xd:initiationInterval="5" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="real" xd:originalName="real" xd:direction="in" xd:interfaceRef="real_r" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="imag" xd:originalName="imag" xd:direction="in" xd:interfaceRef="imag" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="output" xd:originalName="output" xd:direction="out" xd:interfaceRef="output_r" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="4" xd:worst-case="4" xd:average-case="4"/>
+  <xd:resourceEstimates xd:LUT="301" xd:FF="700" xd:BRAM="0" xd:DSP="6"/>
+</xd:acceleratorMap>

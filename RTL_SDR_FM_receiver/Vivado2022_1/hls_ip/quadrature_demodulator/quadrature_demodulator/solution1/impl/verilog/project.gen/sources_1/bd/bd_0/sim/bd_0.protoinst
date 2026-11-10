@@ -1,0 +1,48 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_0": {
+			"proto_instances": {
+				"/hls_inst/imag": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "imag_TDATA"},
+						"TKEEP": { "actual": "imag_TKEEP"},
+						"TLAST": { "actual": "imag_TLAST"},
+						"TREADY": { "actual": "imag_TREADY"},
+						"TSTRB": { "actual": "imag_TSTRB"},
+						"TVALID": { "actual": "imag_TVALID"}
+					}
+				},
+				"/hls_inst/output_r": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "output_r_TDATA"},
+						"TKEEP": { "actual": "output_r_TKEEP"},
+						"TLAST": { "actual": "output_r_TLAST"},
+						"TREADY": { "actual": "output_r_TREADY"},
+						"TSTRB": { "actual": "output_r_TSTRB"},
+						"TVALID": { "actual": "output_r_TVALID"}
+					}
+				},
+				"/hls_inst/real_r": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "real_r_TDATA"},
+						"TKEEP": { "actual": "real_r_TKEEP"},
+						"TLAST": { "actual": "real_r_TLAST"},
+						"TREADY": { "actual": "real_r_TREADY"},
+						"TSTRB": { "actual": "real_r_TSTRB"},
+						"TVALID": { "actual": "real_r_TVALID"}
+					}
+				}
+			}
+		}
+	}
+}

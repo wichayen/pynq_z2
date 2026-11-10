@@ -1,0 +1,54 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Sep 26 05:32:50 2026
+| Host         : ndrswcy running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/low_pass_filter_first_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                  Instance                 |                                 Module                                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                              |                                                                  (top) |       1047 |       1047 |       0 |    0 | 2512 |      0 |      0 |         22 |
+|   bd_0_i                                  |                                                                   bd_0 |       1047 |       1047 |       0 |    0 | 2512 |      0 |      0 |         22 |
+|     hls_inst                              |                                                        bd_0_hls_inst_0 |       1047 |       1047 |       0 |    0 | 2512 |      0 |      0 |         22 |
+|       inst                                |                                  bd_0_hls_inst_0_low_pass_filter_first |       1047 |       1047 |       0 |    0 | 2512 |      0 |      0 |         22 |
+|         (inst)                            |                                  bd_0_hls_inst_0_low_pass_filter_first |        550 |        550 |       0 |    0 | 2284 |      0 |      0 |          0 |
+|         mul_32s_16s_47_2_1_U14            |               bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1 |          3 |          3 |       0 |    0 |    2 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U15            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_0 |         36 |         36 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U16            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_1 |         36 |         36 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U21            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_2 |         35 |         35 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U22            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_3 |         34 |         34 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U25            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_4 |         34 |         34 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U26            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_5 |         35 |         35 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U29            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_6 |         35 |         35 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U30            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_7 |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U34            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_8 |          4 |          4 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U35            |             bd_0_hls_inst_0_low_pass_filter_first_mul_32s_16s_47_2_1_9 |          5 |          5 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mux_42_32_1_1_U19                 |                    bd_0_hls_inst_0_low_pass_filter_first_mux_42_32_1_1 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_42_32_1_1_U20                 |                 bd_0_hls_inst_0_low_pass_filter_first_mux_42_32_1_1_10 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_42_32_1_1_U32                 |                 bd_0_hls_inst_0_low_pass_filter_first_mux_42_32_1_1_11 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         regslice_both_input_r_V_data_V_U  |                    bd_0_hls_inst_0_low_pass_filter_first_regslice_both |         40 |         40 |       0 |    0 |   68 |      0 |      0 |          0 |
+|         regslice_both_input_r_V_keep_V_U  |    bd_0_hls_inst_0_low_pass_filter_first_regslice_both__parameterized0 |          7 |          7 |       0 |    0 |   12 |      0 |      0 |          0 |
+|         regslice_both_input_r_V_last_V_U  |    bd_0_hls_inst_0_low_pass_filter_first_regslice_both__parameterized1 |          6 |          6 |       0 |    0 |    6 |      0 |      0 |          0 |
+|         regslice_both_input_r_V_strb_V_U  | bd_0_hls_inst_0_low_pass_filter_first_regslice_both__parameterized0_12 |          7 |          7 |       0 |    0 |   12 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_data_V_U |                 bd_0_hls_inst_0_low_pass_filter_first_regslice_both_13 |         59 |         59 |       0 |    0 |   68 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_keep_V_U | bd_0_hls_inst_0_low_pass_filter_first_regslice_both__parameterized0_14 |          8 |          8 |       0 |    0 |   12 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_last_V_U | bd_0_hls_inst_0_low_pass_filter_first_regslice_both__parameterized1_15 |          7 |          7 |       0 |    0 |    6 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_strb_V_U | bd_0_hls_inst_0_low_pass_filter_first_regslice_both__parameterized0_16 |          8 |          8 |       0 |    0 |   12 |      0 |      0 |          0 |
++-------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

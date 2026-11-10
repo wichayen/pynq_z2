@@ -1,0 +1,94 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Sep 26 05:36:06 2026
+| Host         : ndrswcy running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/low_pass_filter_second_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                  Instance                 |                                  Module                                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                              |                                                                   (top) |       1981 |       1981 |       0 |    0 | 3284 |      0 |      0 |         44 |
+|   bd_0_i                                  |                                                                    bd_0 |       1981 |       1981 |       0 |    0 | 3284 |      0 |      0 |         44 |
+|     hls_inst                              |                                                         bd_0_hls_inst_0 |       1981 |       1981 |       0 |    0 | 3284 |      0 |      0 |         44 |
+|       (hls_inst)                          |                                                         bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       inst                                |                                  bd_0_hls_inst_0_low_pass_filter_second |       1981 |       1981 |       0 |    0 | 3284 |      0 |      0 |         44 |
+|         (inst)                            |                                  bd_0_hls_inst_0_low_pass_filter_second |        969 |        969 |       0 |    0 | 3103 |      0 |      0 |          0 |
+|         mul_32s_16s_47_2_1_U25            |               bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1 |          0 |          0 |       0 |    0 |    2 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U26            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_0 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U27            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_1 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U43            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_2 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U44            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_3 |          3 |          3 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U47            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_4 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U48            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_5 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U51            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_6 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U52            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_7 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U55            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_8 |          3 |          3 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U56            |             bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_9 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U59            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_10 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U60            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_11 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U63            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_12 |          3 |          3 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U64            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_13 |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U67            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_14 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U68            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_15 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U71            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_16 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U72            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_17 |          3 |          3 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U75            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_18 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U76            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_19 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mul_32s_16s_47_2_1_U79            |            bd_0_hls_inst_0_low_pass_filter_second_mul_32s_16s_47_2_1_20 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          2 |
+|         mux_233_32_1_1_U1                 |                   bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U10                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_21 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U11                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_22 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U12                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_23 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U13                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_24 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U14                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_25 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U15                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_26 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U16                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_27 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U17                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_28 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U18                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_29 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U19                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_30 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U2                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_31 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U20                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_32 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U21                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_33 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U3                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_34 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U30                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_35 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U31                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_36 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U32                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_37 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U33                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_38 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U34                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_39 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U35                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_40 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U36                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_41 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U37                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_42 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U38                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_43 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U39                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_44 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U4                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_45 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U40                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_46 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U41                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_47 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U42                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_48 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U5                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_49 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U6                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_50 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U7                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_51 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U77                |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_52 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U8                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_53 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         mux_233_32_1_1_U9                 |                bd_0_hls_inst_0_low_pass_filter_second_mux_233_32_1_1_54 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         regslice_both_input_r_V_data_V_U  |                    bd_0_hls_inst_0_low_pass_filter_second_regslice_both |         41 |         41 |       0 |    0 |   68 |      0 |      0 |          0 |
+|         regslice_both_input_r_V_last_V_U  |    bd_0_hls_inst_0_low_pass_filter_second_regslice_both__parameterized1 |          6 |          6 |       0 |    0 |    6 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_data_V_U |    bd_0_hls_inst_0_low_pass_filter_second_regslice_both__parameterized2 |         41 |         41 |       0 |    0 |   36 |      0 |      0 |          0 |
+|         regslice_both_output_r_V_last_V_U | bd_0_hls_inst_0_low_pass_filter_second_regslice_both__parameterized1_55 |          7 |          7 |       0 |    0 |    6 |      0 |      0 |          0 |
++-------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

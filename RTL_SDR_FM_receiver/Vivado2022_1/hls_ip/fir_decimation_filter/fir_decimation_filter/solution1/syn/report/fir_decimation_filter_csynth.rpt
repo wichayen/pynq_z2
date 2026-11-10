@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vitis HLS Report for 'fir_decimation_filter'
+================================================================
+* Date:           Fri Oct  2 11:23:21 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        fir_decimation_filter
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.471 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  60.000 ns|  60.000 ns|    7|    7|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    5|       -|      -|    -|
+|Expression       |        -|    -|       0|    103|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|    225|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     83|    -|
+|Register         |        -|    -|     334|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    5|     334|    411|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    2|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------+----------------+---------+----+---+----+-----+
+    |      Instance     |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +-------------------+----------------+---------+----+---+----+-----+
+    |mux_533_16_1_1_U5  |mux_533_16_1_1  |        0|   0|  0|  25|    0|
+    |mux_533_16_1_1_U6  |mux_533_16_1_1  |        0|   0|  0|  25|    0|
+    |mux_533_16_1_1_U7  |mux_533_16_1_1  |        0|   0|  0|  25|    0|
+    |mux_533_16_1_1_U8  |mux_533_16_1_1  |        0|   0|  0|  25|    0|
+    |mux_533_16_1_1_U9  |mux_533_16_1_1  |        0|   0|  0|  25|    0|
+    |mux_533_8_1_1_U1   |mux_533_8_1_1   |        0|   0|  0|  25|    0|
+    |mux_533_8_1_1_U2   |mux_533_8_1_1   |        0|   0|  0|  25|    0|
+    |mux_533_8_1_1_U3   |mux_533_8_1_1   |        0|   0|  0|  25|    0|
+    |mux_533_8_1_1_U4   |mux_533_8_1_1   |        0|   0|  0|  25|    0|
+    +-------------------+----------------+---------+----+---+----+-----+
+    |Total              |                |        0|   0|  0| 225|    0|
+    +-------------------+----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    +----------------------------------+------------------------------+--------------+
+    |             Instance             |            Module            |  Expression  |
+    +----------------------------------+------------------------------+--------------+
+    |mac_muladd_16s_8s_24s_25_4_1_U12  |mac_muladd_16s_8s_24s_25_4_1  |  i0 + i1 * i2|
+    |mac_muladd_16s_8s_24s_25_4_1_U13  |mac_muladd_16s_8s_24s_25_4_1  |  i0 + i1 * i2|
+    |mac_muladd_16s_8s_25s_25_4_1_U14  |mac_muladd_16s_8s_25s_25_4_1  |  i0 + i1 * i2|
+    |mul_mul_16s_8s_24_4_1_U10         |mul_mul_16s_8s_24_4_1         |       i0 * i1|
+    |mul_mul_16s_8s_24_4_1_U11         |mul_mul_16s_8s_24_4_1         |       i0 * i1|
+    +----------------------------------+------------------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |add_ln859_1_fu_590_p2        |         +|   0|  0|  32|          32|          32|
+    |add_ln886_fu_611_p2          |         +|   0|  0|  11|           3|           1|
+    |output_r_TDATA_int_regslice  |         +|   0|  0|  32|          32|          32|
+    |sub_i_i220_fu_186_p2         |         -|   0|  0|  13|           3|           4|
+    |ap_block_state6              |       and|   0|  0|   2|           1|           1|
+    |ap_block_state7_io           |       and|   0|  0|   2|           1|           1|
+    |icmp_ln1065_fu_606_p2        |      icmp|   0|  0|   9|           3|           4|
+    |ap_block_state7              |        or|   0|  0|   2|           1|           1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |Total                        |          |   0|  0| 103|          76|          76|
+    +-----------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                             |  42|          8|    1|          8|
+    |ap_phi_mux_sum_V_new_0_phi_fu_163_p4  |  14|          3|   32|         96|
+    |count_V                               |   9|          2|    3|          6|
+    |input_r_TDATA_blk_n                   |   9|          2|    1|          2|
+    |output_r_TDATA_blk_n                  |   9|          2|    1|          2|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 |  83|         17|   38|        114|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                         Name                                         | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln859_reg_771                                                                     |  25|   0|   25|          0|
+    |ap_CS_fsm                                                                             |   7|   0|    7|          0|
+    |count_V                                                                               |   3|   0|    3|          0|
+    |icmp_ln1065_reg_787                                                                   |   1|   0|    1|          0|
+    |output_temp_data_V_reg_781                                                            |  32|   0|   32|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E     |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_1   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_10  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_11  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_12  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_13  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_14  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_15  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_16  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_17  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_18  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_19  |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_2   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_3   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_4   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_6   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_7   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_8   |   8|   0|    8|          0|
+    |p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_9   |   8|   0|    8|          0|
+    |r_V_3_reg_696                                                                         |   8|   0|    8|          0|
+    |r_V_7_reg_688                                                                         |   8|   0|    8|          0|
+    |r_V_reg_701                                                                           |   8|   0|    8|          0|
+    |sext_ln42_reg_681                                                                     |  33|   0|   33|          0|
+    |sum_V                                                                                 |  32|   0|   32|          0|
+    |tmp_6_reg_736                                                                         |  16|   0|   16|          0|
+    |tmp_last_V_reg_673                                                                    |   1|   0|    1|          0|
+    +--------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                 | 334|   0|  334|          0|
+    +--------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+--------------+-----------------------+--------------+
+|    RTL Ports    | Dir | Bits|   Protocol   |     Source Object     |    C Type    |
++-----------------+-----+-----+--------------+-----------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_none|  fir_decimation_filter|  return value|
+|ap_rst_n         |   in|    1|  ap_ctrl_none|  fir_decimation_filter|  return value|
+|input_r_TDATA    |   in|    8|          axis|       input_r_V_data_V|       pointer|
+|input_r_TVALID   |   in|    1|          axis|       input_r_V_last_V|       pointer|
+|input_r_TREADY   |  out|    1|          axis|       input_r_V_last_V|       pointer|
+|input_r_TLAST    |   in|    1|          axis|       input_r_V_last_V|       pointer|
+|input_r_TKEEP    |   in|    1|          axis|       input_r_V_keep_V|       pointer|
+|input_r_TSTRB    |   in|    1|          axis|       input_r_V_strb_V|       pointer|
+|output_r_TDATA   |  out|   32|          axis|      output_r_V_data_V|       pointer|
+|output_r_TVALID  |  out|    1|          axis|      output_r_V_last_V|       pointer|
+|output_r_TREADY  |   in|    1|          axis|      output_r_V_last_V|       pointer|
+|output_r_TLAST   |  out|    1|          axis|      output_r_V_last_V|       pointer|
+|output_r_TKEEP   |  out|    4|          axis|      output_r_V_keep_V|       pointer|
+|output_r_TSTRB   |  out|    4|          axis|      output_r_V_strb_V|       pointer|
++-----------------+-----+-----+--------------+-----------------------+--------------+
+

@@ -1,0 +1,309 @@
+
+
+================================================================
+== Vitis HLS Report for 'fir_decimation_filter'
+================================================================
+* Date:           Fri Oct  2 11:23:20 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        fir_decimation_filter
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.471 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  60.000 ns|  60.000 ns|    7|    7|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.83>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%spectopmodule_ln17 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [fir_decimation_filter.cpp:17]   --->   Operation 8 'spectopmodule' 'spectopmodule_ln17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln17 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0" [fir_decimation_filter.cpp:17]   --->   Operation 9 'specinterface' 'specinterface_ln17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %input_r_V_data_V, i1 %input_r_V_keep_V, i1 %input_r_V_strb_V, i1 %input_r_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %input_r_V_data_V"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_r_V_keep_V"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_r_V_strb_V"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %input_r_V_last_V"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_r_V_data_V, i4 %output_r_V_keep_V, i4 %output_r_V_strb_V, i1 %output_r_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %output_r_V_data_V"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %output_r_V_keep_V"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %output_r_V_strb_V"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %output_r_V_last_V"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%empty = read i11 @_ssdm_op_Read.axis.volatile.i8P0A.i1P0A.i1P0A.i1P0A, i8 %input_r_V_data_V, i1 %input_r_V_keep_V, i1 %input_r_V_strb_V, i1 %input_r_V_last_V"   --->   Operation 20 'read' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue i11 %empty"   --->   Operation 21 'extractvalue' 'tmp_data_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue i11 %empty"   --->   Operation 22 'extractvalue' 'tmp_last_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%count_V_load = load i3 %count_V"   --->   Operation 23 'load' 'count_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%count_V_load_cast = zext i3 %count_V_load"   --->   Operation 24 'zext' 'count_V_load_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.73ns)   --->   "%sub_i_i220 = sub i4 4, i4 %count_V_load_cast"   --->   Operation 25 'sub' 'sub_i_i220' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%sext_ln42 = sext i4 %sub_i_i220" [fir_decimation_filter.cpp:42]   --->   Operation 26 'sext' 'sext_ln42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_20 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_16" [fir_decimation_filter.cpp:42]   --->   Operation 27 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_21 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_12" [fir_decimation_filter.cpp:42]   --->   Operation 28 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_22 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_8" [fir_decimation_filter.cpp:42]   --->   Operation 29 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_23 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_4" [fir_decimation_filter.cpp:42]   --->   Operation 30 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_24 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E" [fir_decimation_filter.cpp:42]   --->   Operation 31 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.94ns)   --->   "%r_V_7 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i33, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_20, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_21, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_22, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_23, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_24, i33 %sext_ln42" [fir_decimation_filter.cpp:42]   --->   Operation 32 'mux' 'r_V_7' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln42 = trunc i4 %sub_i_i220" [fir_decimation_filter.cpp:42]   --->   Operation 33 'trunc' 'trunc_ln42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_25 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_17" [fir_decimation_filter.cpp:42]   --->   Operation 34 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_26 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_13" [fir_decimation_filter.cpp:42]   --->   Operation 35 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_27 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_9" [fir_decimation_filter.cpp:42]   --->   Operation 36 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_28 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5" [fir_decimation_filter.cpp:42]   --->   Operation 37 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_29 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_1" [fir_decimation_filter.cpp:42]   --->   Operation 38 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (1.94ns)   --->   "%r_V_5 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i33, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_25, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_26, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_27, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_28, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_29, i33 %sext_ln42" [fir_decimation_filter.cpp:42]   --->   Operation 39 'mux' 'r_V_5' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.95ns)   --->   "%switch_ln42 = switch i3 %trunc_ln42, void %arrayidx184.0.0.0592.case.4, i3 0, void %arrayidx184.0.0.0592.case.0, i3 1, void %arrayidx184.0.0.0592.case.1, i3 2, void %arrayidx184.0.0.0592.case.2, i3 3, void %arrayidx184.0.0.0592.case.3" [fir_decimation_filter.cpp:42]   --->   Operation 40 'switch' 'switch_ln42' <Predicate = true> <Delay = 0.95>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_5, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_4" [fir_decimation_filter.cpp:42]   --->   Operation 41 'store' 'store_ln42' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.exit" [fir_decimation_filter.cpp:42]   --->   Operation 42 'br' 'br_ln42' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_5, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_8" [fir_decimation_filter.cpp:42]   --->   Operation 43 'store' 'store_ln42' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.exit" [fir_decimation_filter.cpp:42]   --->   Operation 44 'br' 'br_ln42' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_5, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_12" [fir_decimation_filter.cpp:42]   --->   Operation 45 'store' 'store_ln42' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.exit" [fir_decimation_filter.cpp:42]   --->   Operation 46 'br' 'br_ln42' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_5, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_16" [fir_decimation_filter.cpp:42]   --->   Operation 47 'store' 'store_ln42' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.exit" [fir_decimation_filter.cpp:42]   --->   Operation 48 'br' 'br_ln42' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_5, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E" [fir_decimation_filter.cpp:42]   --->   Operation 49 'store' 'store_ln42' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.exit" [fir_decimation_filter.cpp:42]   --->   Operation 50 'br' 'br_ln42' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_30 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_18" [fir_decimation_filter.cpp:42]   --->   Operation 51 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_31 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_14" [fir_decimation_filter.cpp:42]   --->   Operation 52 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_32 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_10" [fir_decimation_filter.cpp:42]   --->   Operation 53 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_33 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_6" [fir_decimation_filter.cpp:42]   --->   Operation 54 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_34 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_2" [fir_decimation_filter.cpp:42]   --->   Operation 55 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (1.94ns)   --->   "%r_V_3 = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i33, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_30, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_31, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_32, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_33, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_34, i33 %sext_ln42" [fir_decimation_filter.cpp:42]   --->   Operation 56 'mux' 'r_V_3' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.95ns)   --->   "%switch_ln42 = switch i3 %trunc_ln42, void %arrayidx184.0.0.0592.1.case.4, i3 0, void %arrayidx184.0.0.0592.1.case.0, i3 1, void %arrayidx184.0.0.0592.1.case.1, i3 2, void %arrayidx184.0.0.0592.1.case.2, i3 3, void %arrayidx184.0.0.0592.1.case.3" [fir_decimation_filter.cpp:42]   --->   Operation 57 'switch' 'switch_ln42' <Predicate = true> <Delay = 0.95>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_3, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_5" [fir_decimation_filter.cpp:42]   --->   Operation 58 'store' 'store_ln42' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.1.exit" [fir_decimation_filter.cpp:42]   --->   Operation 59 'br' 'br_ln42' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_3, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_9" [fir_decimation_filter.cpp:42]   --->   Operation 60 'store' 'store_ln42' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.1.exit" [fir_decimation_filter.cpp:42]   --->   Operation 61 'br' 'br_ln42' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_3, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_13" [fir_decimation_filter.cpp:42]   --->   Operation 62 'store' 'store_ln42' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.1.exit" [fir_decimation_filter.cpp:42]   --->   Operation 63 'br' 'br_ln42' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_3, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_17" [fir_decimation_filter.cpp:42]   --->   Operation 64 'store' 'store_ln42' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.1.exit" [fir_decimation_filter.cpp:42]   --->   Operation 65 'br' 'br_ln42' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V_3, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_1" [fir_decimation_filter.cpp:42]   --->   Operation 66 'store' 'store_ln42' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.1.exit" [fir_decimation_filter.cpp:42]   --->   Operation 67 'br' 'br_ln42' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_35 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_19" [fir_decimation_filter.cpp:42]   --->   Operation 68 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_36 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_15" [fir_decimation_filter.cpp:42]   --->   Operation 69 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_37 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_11" [fir_decimation_filter.cpp:42]   --->   Operation 70 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_38 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_7" [fir_decimation_filter.cpp:42]   --->   Operation 71 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_39 = load i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_3" [fir_decimation_filter.cpp:42]   --->   Operation 72 'load' 'p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (1.94ns)   --->   "%r_V = mux i8 @_ssdm_op_Mux.ap_auto.5i8.i33, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_35, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_36, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_37, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_38, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_39, i33 %sext_ln42" [fir_decimation_filter.cpp:42]   --->   Operation 73 'mux' 'r_V' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 74 [1/1] (0.95ns)   --->   "%switch_ln42 = switch i3 %trunc_ln42, void %arrayidx184.0.0.0592.2.case.4, i3 0, void %arrayidx184.0.0.0592.2.case.0, i3 1, void %arrayidx184.0.0.0592.2.case.1, i3 2, void %arrayidx184.0.0.0592.2.case.2, i3 3, void %arrayidx184.0.0.0592.2.case.3" [fir_decimation_filter.cpp:42]   --->   Operation 74 'switch' 'switch_ln42' <Predicate = true> <Delay = 0.95>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_6" [fir_decimation_filter.cpp:42]   --->   Operation 75 'store' 'store_ln42' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.2.exit" [fir_decimation_filter.cpp:42]   --->   Operation 76 'br' 'br_ln42' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_10" [fir_decimation_filter.cpp:42]   --->   Operation 77 'store' 'store_ln42' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.2.exit" [fir_decimation_filter.cpp:42]   --->   Operation 78 'br' 'br_ln42' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_14" [fir_decimation_filter.cpp:42]   --->   Operation 79 'store' 'store_ln42' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.2.exit" [fir_decimation_filter.cpp:42]   --->   Operation 80 'br' 'br_ln42' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_18" [fir_decimation_filter.cpp:42]   --->   Operation 81 'store' 'store_ln42' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.2.exit" [fir_decimation_filter.cpp:42]   --->   Operation 82 'br' 'br_ln42' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%store_ln42 = store i8 %r_V, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_2" [fir_decimation_filter.cpp:42]   --->   Operation 83 'store' 'store_ln42' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln42 = br void %arrayidx184.0.0.0592.2.exit" [fir_decimation_filter.cpp:42]   --->   Operation 84 'br' 'br_ln42' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.95ns)   --->   "%switch_ln44 = switch i3 %trunc_ln42, void %arrayidx184.0.0.0592.3.case.4, i3 0, void %arrayidx184.0.0.0592.3.case.0, i3 1, void %arrayidx184.0.0.0592.3.case.1, i3 2, void %arrayidx184.0.0.0592.3.case.2, i3 3, void %arrayidx184.0.0.0592.3.case.3" [fir_decimation_filter.cpp:44]   --->   Operation 85 'switch' 'switch_ln44' <Predicate = true> <Delay = 0.95>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%store_ln44 = store i8 %tmp_data_V_1, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_7" [fir_decimation_filter.cpp:44]   --->   Operation 86 'store' 'store_ln44' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln44 = br void %arrayidx184.0.0.0592.3.exit" [fir_decimation_filter.cpp:44]   --->   Operation 87 'br' 'br_ln44' <Predicate = (trunc_ln42 == 3)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%store_ln44 = store i8 %tmp_data_V_1, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_11" [fir_decimation_filter.cpp:44]   --->   Operation 88 'store' 'store_ln44' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln44 = br void %arrayidx184.0.0.0592.3.exit" [fir_decimation_filter.cpp:44]   --->   Operation 89 'br' 'br_ln44' <Predicate = (trunc_ln42 == 2)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%store_ln44 = store i8 %tmp_data_V_1, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_15" [fir_decimation_filter.cpp:44]   --->   Operation 90 'store' 'store_ln44' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%br_ln44 = br void %arrayidx184.0.0.0592.3.exit" [fir_decimation_filter.cpp:44]   --->   Operation 91 'br' 'br_ln44' <Predicate = (trunc_ln42 == 1)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%store_ln44 = store i8 %tmp_data_V_1, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_19" [fir_decimation_filter.cpp:44]   --->   Operation 92 'store' 'store_ln44' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln44 = br void %arrayidx184.0.0.0592.3.exit" [fir_decimation_filter.cpp:44]   --->   Operation 93 'br' 'br_ln44' <Predicate = (trunc_ln42 == 0)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%store_ln44 = store i8 %tmp_data_V_1, i8 %p_ZZ21fir_decimation_filterRN3hls6streamINS_4axisI8ap_fixedILi8ELi1EL9ap_q_mode5E_3" [fir_decimation_filter.cpp:44]   --->   Operation 94 'store' 'store_ln44' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln44 = br void %arrayidx184.0.0.0592.3.exit" [fir_decimation_filter.cpp:44]   --->   Operation 95 'br' 'br_ln44' <Predicate = (trunc_ln42 != 0 & trunc_ln42 != 1 & trunc_ln42 != 2 & trunc_ln42 != 3)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%sext_ln1317 = sext i8 %tmp_data_V_1"   --->   Operation 96 'sext' 'sext_ln1317' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (1.94ns)   --->   "%tmp_4 = mux i16 @_ssdm_op_Mux.ap_auto.5i16.i33, i16 65463, i16 65309, i16 65438, i16 249, i16 625, i33 %sext_ln42"   --->   Operation 97 'mux' 'tmp_4' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%sext_ln1319 = sext i16 %tmp_4"   --->   Operation 98 'sext' 'sext_ln1319' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [4/4] (2.15ns) (root node of the DSP)   --->   "%r_V_14 = mul i24 %sext_ln1319, i24 %sext_ln1317"   --->   Operation 99 'mul' 'r_V_14' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%sext_ln1317_5 = sext i8 %r_V_5"   --->   Operation 100 'sext' 'sext_ln1317_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (1.94ns)   --->   "%tmp_7 = mux i16 @_ssdm_op_Mux.ap_auto.5i16.i33, i16 630, i16 63994, i16 63974, i16 65078, i16 465, i33 %sext_ln42"   --->   Operation 101 'mux' 'tmp_7' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%sext_ln1319_3 = sext i16 %tmp_7"   --->   Operation 102 'sext' 'sext_ln1319_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [4/4] (2.15ns) (root node of the DSP)   --->   "%r_V_12 = mul i24 %sext_ln1319_3, i24 %sext_ln1317_5"   --->   Operation 103 'mul' 'r_V_12' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 2.99>
+ST_2 : Operation 104 [3/4] (2.15ns) (root node of the DSP)   --->   "%r_V_14 = mul i24 %sext_ln1319, i24 %sext_ln1317"   --->   Operation 104 'mul' 'r_V_14' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%sext_ln1317_1 = sext i8 %r_V"   --->   Operation 105 'sext' 'sext_ln1317_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (1.94ns)   --->   "%tmp_5 = mux i16 @_ssdm_op_Mux.ap_auto.5i16.i33, i16 465, i16 65078, i16 63974, i16 63994, i16 630, i33 %sext_ln42"   --->   Operation 106 'mux' 'tmp_5' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%sext_ln1319_1 = sext i16 %tmp_5"   --->   Operation 107 'sext' 'sext_ln1319_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 108 [3/3] (1.05ns) (grouped into DSP with root node add_ln859_2)   --->   "%r_V_10 = mul i24 %sext_ln1319_1, i24 %sext_ln1317_1"   --->   Operation 108 'mul' 'r_V_10' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 109 [1/1] (1.94ns)   --->   "%tmp_6 = mux i16 @_ssdm_op_Mux.ap_auto.5i16.i33, i16 4623, i16 8572, i16 10222, i16 8572, i16 4623, i33 %sext_ln42"   --->   Operation 109 'mux' 'tmp_6' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 110 [3/4] (2.15ns) (root node of the DSP)   --->   "%r_V_12 = mul i24 %sext_ln1319_3, i24 %sext_ln1317_5"   --->   Operation 110 'mul' 'r_V_12' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%sext_ln1317_7 = sext i8 %r_V_7"   --->   Operation 111 'sext' 'sext_ln1317_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (1.94ns)   --->   "%tmp_8 = mux i16 @_ssdm_op_Mux.ap_auto.5i16.i33, i16 625, i16 249, i16 65438, i16 65309, i16 65463, i33 %sext_ln42"   --->   Operation 112 'mux' 'tmp_8' <Predicate = true> <Delay = 1.94> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%sext_ln1319_4 = sext i16 %tmp_8"   --->   Operation 113 'sext' 'sext_ln1319_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 114 [3/3] (1.05ns) (grouped into DSP with root node add_ln859)   --->   "%r_V_13 = mul i24 %sext_ln1319_4, i24 %sext_ln1317_7"   --->   Operation 114 'mul' 'r_V_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 2.15>
+ST_3 : Operation 115 [2/4] (2.15ns) (root node of the DSP)   --->   "%r_V_14 = mul i24 %sext_ln1319, i24 %sext_ln1317"   --->   Operation 115 'mul' 'r_V_14' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 116 [2/3] (1.05ns) (grouped into DSP with root node add_ln859_2)   --->   "%r_V_10 = mul i24 %sext_ln1319_1, i24 %sext_ln1317_1"   --->   Operation 116 'mul' 'r_V_10' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%sext_ln1317_3 = sext i8 %r_V_3"   --->   Operation 117 'sext' 'sext_ln1317_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] (0.00ns)   --->   "%sext_ln1319_2 = sext i16 %tmp_6"   --->   Operation 118 'sext' 'sext_ln1319_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 119 [3/3] (1.05ns) (grouped into DSP with root node add_ln859_3)   --->   "%r_V_11 = mul i24 %sext_ln1319_2, i24 %sext_ln1317_3"   --->   Operation 119 'mul' 'r_V_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 120 [2/4] (2.15ns) (root node of the DSP)   --->   "%r_V_12 = mul i24 %sext_ln1319_3, i24 %sext_ln1317_5"   --->   Operation 120 'mul' 'r_V_12' <Predicate = true> <Delay = 2.15> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 121 [2/3] (1.05ns) (grouped into DSP with root node add_ln859)   --->   "%r_V_13 = mul i24 %sext_ln1319_4, i24 %sext_ln1317_7"   --->   Operation 121 'mul' 'r_V_13' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 2.10>
+ST_4 : Operation 122 [1/4] (0.00ns) (root node of the DSP)   --->   "%r_V_14 = mul i24 %sext_ln1319, i24 %sext_ln1317"   --->   Operation 122 'mul' 'r_V_14' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%sext_ln45 = sext i24 %r_V_14" [fir_decimation_filter.cpp:45]   --->   Operation 123 'sext' 'sext_ln45' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 124 [1/3] (0.00ns) (grouped into DSP with root node add_ln859_2)   --->   "%r_V_10 = mul i24 %sext_ln1319_1, i24 %sext_ln1317_1"   --->   Operation 124 'mul' 'r_V_10' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 125 [1/1] (0.00ns) (grouped into DSP with root node add_ln859_2)   --->   "%sext_ln1317_2 = sext i24 %r_V_10"   --->   Operation 125 'sext' 'sext_ln1317_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 126 [2/3] (1.05ns) (grouped into DSP with root node add_ln859_3)   --->   "%r_V_11 = mul i24 %sext_ln1319_2, i24 %sext_ln1317_3"   --->   Operation 126 'mul' 'r_V_11' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 127 [1/4] (0.00ns) (root node of the DSP)   --->   "%r_V_12 = mul i24 %sext_ln1319_3, i24 %sext_ln1317_5"   --->   Operation 127 'mul' 'r_V_12' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "%sext_ln1317_6 = sext i24 %r_V_12"   --->   Operation 128 'sext' 'sext_ln1317_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 129 [1/3] (0.00ns) (grouped into DSP with root node add_ln859)   --->   "%r_V_13 = mul i24 %sext_ln1319_4, i24 %sext_ln1317_7"   --->   Operation 129 'mul' 'r_V_13' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 130 [1/1] (0.00ns) (grouped into DSP with root node add_ln859)   --->   "%sext_ln859 = sext i24 %r_V_13"   --->   Operation 130 'sext' 'sext_ln859' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 131 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln859 = add i25 %sext_ln1317_6, i25 %sext_ln859"   --->   Operation 131 'add' 'add_ln859' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 132 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln859_2 = add i25 %sext_ln45, i25 %sext_ln1317_2"   --->   Operation 132 'add' 'add_ln859_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 4.20>
+ST_5 : Operation 133 [1/3] (0.00ns) (grouped into DSP with root node add_ln859_3)   --->   "%r_V_11 = mul i24 %sext_ln1319_2, i24 %sext_ln1317_3"   --->   Operation 133 'mul' 'r_V_11' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 134 [1/1] (0.00ns) (grouped into DSP with root node add_ln859_3)   --->   "%sext_ln1317_4 = sext i24 %r_V_11"   --->   Operation 134 'sext' 'sext_ln1317_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 135 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln859 = add i25 %sext_ln1317_6, i25 %sext_ln859"   --->   Operation 135 'add' 'add_ln859' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 136 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln859_2 = add i25 %sext_ln45, i25 %sext_ln1317_2"   --->   Operation 136 'add' 'add_ln859_2' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 137 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln859_3 = add i25 %add_ln859_2, i25 %sext_ln1317_4"   --->   Operation 137 'add' 'add_ln859_3' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 6.47>
+ST_6 : Operation 138 [1/1] (0.00ns)   --->   "%sum_V_load = load i32 %sum_V"   --->   Operation 138 'load' 'sum_V_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 139 [1/1] (0.00ns)   --->   "%sext_ln859_1 = sext i25 %add_ln859"   --->   Operation 139 'sext' 'sext_ln859_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 140 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln859_1 = add i32 %sext_ln859_1, i32 %sum_V_load"   --->   Operation 140 'add' 'add_ln859_1' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 141 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln859_3 = add i25 %add_ln859_2, i25 %sext_ln1317_4"   --->   Operation 141 'add' 'add_ln859_3' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 142 [1/1] (0.00ns)   --->   "%sext_ln859_2 = sext i25 %add_ln859_3"   --->   Operation 142 'sext' 'sext_ln859_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 143 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%output_temp_data_V = add i32 %sext_ln859_2, i32 %add_ln859_1"   --->   Operation 143 'add' 'output_temp_data_V' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 144 [1/1] (1.13ns)   --->   "%icmp_ln1065 = icmp_eq  i3 %count_V_load, i3 4"   --->   Operation 144 'icmp' 'icmp_ln1065' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 145 [1/1] (0.00ns)   --->   "%br_ln52 = br i1 %icmp_ln1065, void %if.else, void %if.then" [fir_decimation_filter.cpp:52]   --->   Operation 145 'br' 'br_ln52' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 146 [1/1] (1.65ns)   --->   "%add_ln886 = add i3 %count_V_load, i3 1"   --->   Operation 146 'add' 'add_ln886' <Predicate = (!icmp_ln1065)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 147 [1/1] (1.58ns)   --->   "%store_ln886 = store i3 %add_ln886, i3 %count_V"   --->   Operation 147 'store' 'store_ln886' <Predicate = (!icmp_ln1065)> <Delay = 1.58>
+ST_6 : Operation 148 [2/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %output_r_V_data_V, i4 %output_r_V_keep_V, i4 %output_r_V_strb_V, i1 %output_r_V_last_V, i32 %output_temp_data_V, i4 15, i4 15, i1 %tmp_last_V"   --->   Operation 148 'write' 'write_ln304' <Predicate = (icmp_ln1065)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 7 <SV = 6> <Delay = 1.58>
+ST_7 : Operation 149 [1/1] (1.58ns)   --->   "%br_ln0 = br void %mergeST"   --->   Operation 149 'br' 'br_ln0' <Predicate = (!icmp_ln1065)> <Delay = 1.58>
+ST_7 : Operation 150 [1/1] (1.58ns)   --->   "%store_ln57 = store i3 0, i3 %count_V" [fir_decimation_filter.cpp:57]   --->   Operation 150 'store' 'store_ln57' <Predicate = (icmp_ln1065)> <Delay = 1.58>
+ST_7 : Operation 151 [1/2] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %output_r_V_data_V, i4 %output_r_V_keep_V, i4 %output_r_V_strb_V, i1 %output_r_V_last_V, i32 %output_temp_data_V, i4 15, i4 15, i1 %tmp_last_V"   --->   Operation 151 'write' 'write_ln304' <Predicate = (icmp_ln1065)> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_7 : Operation 152 [1/1] (1.58ns)   --->   "%br_ln60 = br void %mergeST" [fir_decimation_filter.cpp:60]   --->   Operation 152 'br' 'br_ln60' <Predicate = (icmp_ln1065)> <Delay = 1.58>
+ST_7 : Operation 153 [1/1] (0.00ns)   --->   "%sum_V_new_0 = phi i32 0, void %if.then, i32 %output_temp_data_V, void %if.else"   --->   Operation 153 'phi' 'sum_V_new_0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 154 [1/1] (0.00ns)   --->   "%store_ln859 = store i32 %sum_V_new_0, i32 %sum_V"   --->   Operation 154 'store' 'store_ln859' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 155 [1/1] (0.00ns)   --->   "%ret_ln64 = ret" [fir_decimation_filter.cpp:64]   --->   Operation 155 'ret' 'ret_ln64' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 5.83ns
+The critical path consists of the following:
+	'load' operation ('count_V_load') on static variable 'count_V' [46]  (0 ns)
+	'sub' operation ('sub_i_i220') [48]  (1.74 ns)
+	'mux' operation ('tmp_4') [144]  (1.95 ns)
+	'mul' operation of DSP[146] ('r.V') [146]  (2.15 ns)
+
+ <State 2>: 3ns
+The critical path consists of the following:
+	'mux' operation ('tmp_5') [149]  (1.95 ns)
+	'mul' operation of DSP[172] ('r.V') [151]  (1.05 ns)
+
+ <State 3>: 2.15ns
+The critical path consists of the following:
+	'mul' operation of DSP[146] ('r.V') [146]  (2.15 ns)
+
+ <State 4>: 2.1ns
+The critical path consists of the following:
+	'mul' operation of DSP[161] ('r.V') [161]  (0 ns)
+	'add' operation of DSP[169] ('add_ln859') [169]  (2.1 ns)
+
+ <State 5>: 4.2ns
+The critical path consists of the following:
+	'add' operation of DSP[172] ('add_ln859_2') [172]  (2.1 ns)
+	'add' operation of DSP[173] ('add_ln859_3') [173]  (2.1 ns)
+
+ <State 6>: 6.47ns
+The critical path consists of the following:
+	'add' operation of DSP[173] ('add_ln859_3') [173]  (2.1 ns)
+	'add' operation ('output_temp.data.V') [175]  (4.37 ns)
+	axis write operation ('write_ln304') on port 'output_r_V_data_V' [184]  (0 ns)
+
+ <State 7>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('tmp.data.V') with incoming values : ('output_temp.data.V') [187]  (1.59 ns)
+	'phi' operation ('tmp.data.V') with incoming values : ('output_temp.data.V') [187]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

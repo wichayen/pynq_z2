@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.1
+Project:             low_pass_filter_second
+Solution:            solution1
+Device target:       xc7z020-clg400-1
+Report date:         Sat Sep 26 05:37:31 +0700 2026
+
+#=== Post-Implementation Resource usage ===
+SLICE:          918
+LUT:           1614
+FF:            3284
+DSP:             44
+BRAM:             0
+URAM:             0
+LATCH:            0
+SRL:              0
+CLB:              0
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      6.883
+CP achieved post-implementation: 7.825
+Timing met

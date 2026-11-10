@@ -1,0 +1,169 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Sat Sep 26 05:44:36 +0700 2026
+    * Version:         2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:         quadrature_demodulator
+    * Solution:        solution1 (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              303
+FF:               526
+DSP:              8
+BRAM:             0
+URAM:             0
+SRL:              0
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++------------+-------------+
+| Timing     | Period (ns) |
++------------+-------------+
+| Target     | 10.000      |
+| Post-Route | 5.745       |
++------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++-------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+-----------------------------------------------------------------------------+
+| Name                                | LUT | FF  | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source                                                                      |
++-------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+-----------------------------------------------------------------------------+
+| inst                                | 303 | 526 | 8   |      |      |     |        |      |         |          |                                                                             |
+|   (inst)                            |     | 242 |     |      |      |     |        |      |         |          |                                                                             |
+|   mul_32s_32s_54_2_1_U1             | 37  | 34  | 4   |      |      |     |        |      |         |          |                                                                             |
+|     bind_op mul                     |     |     |     |      |      |     |        | auto | 1       | r_V_1    | C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319 |
+|   mul_32s_32s_54_2_1_U2             | 37  | 34  | 4   |      |      |     |        |      |         |          |                                                                             |
+|     bind_op mul                     |     |     |     |      |      |     |        | auto | 1       | r_V_3    | C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1319 |
+|   regslice_both_imag_V_data_V_U     | 69  | 68  |     |      |      |     |        |      |         |          |                                                                             |
+|   regslice_both_output_r_V_data_V_U | 77  | 68  |     |      |      |     |        |      |         |          |                                                                             |
+|   regslice_both_output_r_V_last_V_U | 6   | 6   |     |      |      |     |        |      |         |          |                                                                             |
+|   regslice_both_real_r_V_data_V_U   | 71  | 68  |     |      |      |     |        |      |         |          |                                                                             |
+|   regslice_both_real_r_V_last_V_U   | 6   | 6   |     |      |      |     |        |      |         |          |                                                                             |
++-------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+-----------------------------------------------------------------------------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.57%  | OK     |
+| FD                                                        | 50%       | 0.49%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.00%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 3.64%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 3.64%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 10     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+---------------------------------------+-----------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                        | ENDPOINT PIN                            | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                       |                                         |              |            |                |          DELAY |        DELAY |
++-------+-------+---------------------------------------+-----------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 4.255 | mul_32s_32s_54_2_1_U1/tmp_product/CLK | mul_32s_32s_54_2_1_U1/dout_reg/PCIN[0]  |            0 |          1 |          4.261 |          4.206 |        0.055 |
+| Path2 | 4.255 | mul_32s_32s_54_2_1_U1/tmp_product/CLK | mul_32s_32s_54_2_1_U1/dout_reg/PCIN[10] |            0 |          1 |          4.261 |          4.206 |        0.055 |
+| Path3 | 4.255 | mul_32s_32s_54_2_1_U1/tmp_product/CLK | mul_32s_32s_54_2_1_U1/dout_reg/PCIN[11] |            0 |          1 |          4.261 |          4.206 |        0.055 |
+| Path4 | 4.255 | mul_32s_32s_54_2_1_U1/tmp_product/CLK | mul_32s_32s_54_2_1_U1/dout_reg/PCIN[12] |            0 |          1 |          4.261 |          4.206 |        0.055 |
+| Path5 | 4.255 | mul_32s_32s_54_2_1_U1/tmp_product/CLK | mul_32s_32s_54_2_1_U1/dout_reg/PCIN[13] |            0 |          1 |          4.261 |          4.206 |        0.055 |
++-------+-------+---------------------------------------+-----------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +-----------------------------------+------------------+
+    | Path1 Cells                       | Primitive Type   |
+    +-----------------------------------+------------------+
+    | mul_32s_32s_54_2_1_U1/tmp_product | MULT.dsp.DSP48E1 |
+    | mul_32s_32s_54_2_1_U1/dout_reg    | MULT.dsp.DSP48E1 |
+    +-----------------------------------+------------------+
+
+    +-----------------------------------+------------------+
+    | Path2 Cells                       | Primitive Type   |
+    +-----------------------------------+------------------+
+    | mul_32s_32s_54_2_1_U1/tmp_product | MULT.dsp.DSP48E1 |
+    | mul_32s_32s_54_2_1_U1/dout_reg    | MULT.dsp.DSP48E1 |
+    +-----------------------------------+------------------+
+
+    +-----------------------------------+------------------+
+    | Path3 Cells                       | Primitive Type   |
+    +-----------------------------------+------------------+
+    | mul_32s_32s_54_2_1_U1/tmp_product | MULT.dsp.DSP48E1 |
+    | mul_32s_32s_54_2_1_U1/dout_reg    | MULT.dsp.DSP48E1 |
+    +-----------------------------------+------------------+
+
+    +-----------------------------------+------------------+
+    | Path4 Cells                       | Primitive Type   |
+    +-----------------------------------+------------------+
+    | mul_32s_32s_54_2_1_U1/tmp_product | MULT.dsp.DSP48E1 |
+    | mul_32s_32s_54_2_1_U1/dout_reg    | MULT.dsp.DSP48E1 |
+    +-----------------------------------+------------------+
+
+    +-----------------------------------+------------------+
+    | Path5 Cells                       | Primitive Type   |
+    +-----------------------------------+------------------+
+    | mul_32s_32s_54_2_1_U1/tmp_product | MULT.dsp.DSP48E1 |
+    | mul_32s_32s_54_2_1_U1/dout_reg    | MULT.dsp.DSP48E1 |
+    +-----------------------------------+------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------------------------+
+| Report Type              | Report Location                                                               |
++--------------------------+-------------------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/quadrature_demodulator_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/quadrature_demodulator_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/quadrature_demodulator_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/quadrature_demodulator_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/quadrature_demodulator_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/quadrature_demodulator_utilization_hierarchical_synth.rpt |
++--------------------------+-------------------------------------------------------------------------------+
+
+
