@@ -1,3 +1,7 @@
+---
+# Detail
+
+https://wichayen.github.io/fpgathailand/Pynq_z2_FM_Radio.html
 
 ---
 # Reference
