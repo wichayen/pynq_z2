@@ -17,3 +17,10 @@ IMAGE_INSTALL:append = " \
     make \
     binutils \
 "
+
+# FM SDR application: libusb for librtlsdr and i2c tools. The application, the sdr_dma module and
+# librtlsdr are built outside PetaLinux (see fm_sdr/README.md), so they are not installed here.
+IMAGE_INSTALL:append = " \
+    libusb1 \
+    i2c-tools \
+"

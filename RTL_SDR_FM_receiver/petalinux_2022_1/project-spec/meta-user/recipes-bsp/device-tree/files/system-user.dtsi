@@ -1,0 +1,118 @@
+/include/ "system-conf.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+
+&i2c0 {
+    clock-frequency = <100000>;
+    status = "okay";
+};
+
+/ {
+    usb_phy0: usb_phy@0 {
+        compatible = "ulpi-phy";
+        #phy-cells = <0>;
+        reg = <0xe0002000 0x1000>;
+        view-port = <0x0170>;
+        drv-vbus;
+    };
+};
+
+&usb0 {
+    status = "okay";
+    dr_mode = "host";
+    usb-phy = <&usb_phy0>;
+};
+
+&amba_pl {
+    digilent_hdmi {
+        compatible = "digilent,hdmi";
+
+        clocks = <&video_axi_dynclk_0>;
+        clock-names = "clk";
+
+        digilent,edid-i2c = <&i2c0>;
+        digilent,fmax = <142000>;
+
+        port@0 {
+            hdmi_ep: endpoint {
+                remote-endpoint = <&pl_disp_ep>;
+            };
+        };
+    };
+
+    xlnx_pl_disp {
+        compatible = "xlnx,pl-disp";
+
+        dmas = <&video_axi_vdma_0 0>;
+        dma-names = "dma0";
+
+        /* xlnx,vtc = <&video_v_tc_0>; */
+        /* dglnt,edid-i2c = <&i2c1>; */
+
+        xlnx,vformat = "XR24"; /* XRGB8888: B,G,R,X in memory; X dropped by axis_subset_converter */
+        xlnx,bridge = <&video_v_tc_0>;
+
+        port@0 {
+            pl_disp_ep: endpoint {
+                remote-endpoint = <&hdmi_ep>;
+            };
+        };
+    };
+};
+
+&video_axi_vdma_0 {
+    dma-ranges = <0x00000000 0x00000000 0x40000000>;
+};
+
+&video_axi_dynclk_0 {
+    compatible = "dglnt,axi-dynclk";
+
+    #clock-cells = <0>;
+    clocks = <&clkc 15>;
+};
+
+&video_v_tc_0 {
+    compatible = "xlnx,bridge-v-tc-6.1";
+    xlnx,pixels-per-clock = <1>;
+
+    /* clock-names = "s_axi_aclk", "clk"; */
+    /* clocks = <&clkc 15>, <&video_axi_dynclk_0>; */
+};
+
+/* ===========================================================================
+ * FM SDR application (C / C++)
+ *   RTL-SDR (USB) -> AXI DMA -> FPGA FM demod -> AXI-Stream -> audio_codec_ctrl_0 -> ADAU1761
+ *   (HDMI nodes above are unchanged: the SDR display can use /dev/fb0, DRM or X11)
+ * =========================================================================== */
+
+/* PS I2C1 (routed to the PL pins through EMIO) is wired to the ADAU1761 codec (address 0x3B).
+ * No kernel codec driver is bound: the application configures the codec through /dev/i2c-N. */
+&i2c1 {
+    clock-frequency = <100000>;
+    status = "okay";
+};
+
+/* Register access of the audio IP from user space through UIO.
+ * Needs the kernel command line option  uio_pdrv_genirq.of_id=generic-uio  (set in bsp.cfg). */
+&audio_codec_ctrl_0 {
+    compatible = "generic-uio";
+    linux,uio-name = "audio_codec_ctrl";
+};
+
+/* The AXI DMA stays under the xilinx_dma (dmaengine) driver: both completion interrupts are handled
+ * by the kernel.  This node is what the sdr_dma kernel module binds to (platform driver, matched by
+ * "compatible"): without it, insmod sdr_dma.ko loads but never probes and /dev/sdr_dma is not created.
+ * The module itself is built outside PetaLinux (see fm_sdr/module); it exposes the two DMA channels and
+ * the CMA buffers to the application as /dev/sdr_dma (ioctl + mmap).
+ * The buffer counts / sizes below are read by the module at probe time. */
+&amba_pl {
+    sdr_dma: sdr_dma {
+        compatible = "sdr,sdr-dma-1.0";
+        dmas = <&rtl_sdr_axi_dma_0 0 &rtl_sdr_axi_dma_0 1>;
+        dma-names = "tx", "rx";
+        sdr,tx-buffers = <4>;
+        sdr,tx-size = <3072000>;        /* 1,536,000 IQ samples x 2 bytes (0.8 s at 1.92 MSPS) */
+        sdr,rx-buffers = <4>;
+        sdr,rx-size = <76800>;          /* 38,400 audio samples x 2 bytes */
+    };
+};
